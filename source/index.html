@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <title>HTML Academy: Кэт энерджи. Главная.</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page-body page-body--index">
@@ -38,6 +42,11 @@
       <section class="hero">
         <h2 class="hero__title">Функциональное питание для котов</h2>
         <p class="hero__slogan">Занялся собой? Займись котом!</p>
+        <picture>
+          <source type="image/png" width="552" height="499" media="(min-width: 1440px)" srcset="images/index/hero/index-can-desktop@1x.png 1x, images/index/hero/index-can-desktop@2x.png 2x">
+          <source type="image/png" width="709" height="609" media="(min-width: 768px)" srcset="images/index/hero/index-can-tablet@1x.png 1x, images/index/hero/index-can-tablet@2x.png 2x">
+          <img class="hero__image" width="280" height="270" alt="Питание для котов." src="images/index/hero/index-can@1x.png" srcset="images/index/hero/index-can@2x.png 2x">
+        </picture>
         <a class="hero__button button button--primary" href="form.html">подобрать программу</a>
       </section>
 
@@ -115,9 +124,11 @@
           </p>
         </div>
 
-        <div class="example__cat">
-          <img class="example__cat-image" src="data:," width="10" height="10"
-            alt="Визуальное сравнение состояния животного До и После применения диеты.">
+        <div class="example__slider example-slider">
+          <picture>
+            <source type="image/png" width="560" height="512" media="(min-width: 768px)" srcset="images/index/example/cat-slider-stub-tablet@1x.png 1x, images/index/example/cat-slider-stub-tablet@2x.png 2x">
+            <img class="example-slider__image example-slider__image--before" width="280" height="256" alt="Сравнение До диеты и После." src="images/index/example/cat-slider-stub@1x.png" srcset="images/index/example/cat-slider-stub@2x.png 2x">
+          </picture>
         </div>
       </section>
 
@@ -135,8 +146,11 @@
           </p>
         </div>
 
-        <img class="location__map" src="data:," width="10" height="10"
-          alt="Расположение на карте города.">
+        <picture>
+          <source type="image/png" width="1440" height="400" media="(min-width: 1440px)" srcset="images/footer/map-stub-desktop@1x.png 1x, images/footer/map-stub-desktop@2x.png 2x">
+          <source type="image/png" width="768" height="400" media="(min-width: 768px)" srcset="images/footer/map-stub-tablet@1x.png 1x, images/footer/map-stub-tablet@2x.png 2x">
+          <img class="location__map" width="320" height="362" alt="Расположение на карте." src="images/footer/map-stub@1x.png" srcset="images/footer/map-stub@2x.png 2x" >
+        </picture>
       </section>
 
       <section class="main-footer__links footer-links">
