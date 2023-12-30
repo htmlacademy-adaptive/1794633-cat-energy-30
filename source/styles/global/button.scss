@@ -1,0 +1,19 @@
+@use "../global/fonts";
+@use "../global/variables";
+
+.button {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border: none;
+
+  &--primary {
+    background-color: variables.$button-primary-color;
+  }
+
+  &--secondary {
+    background-color: variables.$button-secondary-color;
+  }
+}
+
+

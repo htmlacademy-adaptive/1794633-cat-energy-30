@@ -1,0 +1,19 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.hero {
+  /*temporary coloring for font contrast*/
+  background-color: variables.$hero-background-color;
+}
+
+.hero__title {
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 36px, 36px);
+}
+
+.hero__slogan {
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 14px);
+}
+
+.hero__button {
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 18px, uppercase);
+}
