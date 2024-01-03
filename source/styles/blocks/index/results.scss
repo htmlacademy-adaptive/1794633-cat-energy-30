@@ -1,0 +1,10 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.results__number {
+  @include fonts.set-font(oswald, variables.$general-title-color, 24px, 100%);
+}
+
+.results__description {
+  @include fonts.set-font(lato, variables.$general-font-color, 12px, 100%);
+}

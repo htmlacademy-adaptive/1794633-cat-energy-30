@@ -7,13 +7,13 @@
 }
 
 .hero__title {
-  @include fonts.set-font(oswald, variables.$general-light-font-color, 36px, 36px);
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 36px, 100%);
 }
 
 .hero__slogan {
-  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 14px);
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 100%, uppercase);
 }
 
 .hero__button {
-  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 18px, uppercase);
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 128.57%, uppercase);
 }

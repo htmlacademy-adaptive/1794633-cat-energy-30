@@ -1,0 +1,14 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.business-card__title {
+  @include fonts.set-font(oswald, variables.$triple-dark-grey-font-color, 16px, 125%, uppercase);
+}
+
+.business-card__street {
+  @include fonts.set-font(lato, variables.$general-font-color, 16px, 142.86%);
+}
+
+.business-card--grey {
+  background-color: variables.$grey-background-color;
+}

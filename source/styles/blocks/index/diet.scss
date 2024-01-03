@@ -1,11 +1,15 @@
 @use "../../global/fonts";
 @use "../../global/variables";
 
-.diets__title {
-  @include fonts.set-font(oswald, variables.$general-dark-font-color, 24px, 37px, uppercase);
+.diet {
+  background-color: variables.$grey-background-color;
+}
+
+.diet__title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 24px, 154.17%, uppercase);
 }
 
 .diet__link {
-  @include fonts.set-font(oswald, variables.$general-dark-font-color, 16px, 16px, uppercase);
+  @include fonts.set-font(oswald, variables.$general-title-color, 16px, 100%, uppercase);
   text-decoration: none;
 }

@@ -1,0 +1,11 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.catalog-gift {
+  // temporary background color
+  background-color: variables.$hero-background-color;
+}
+
+.catalog-gift__description {
+  @include fonts.set-font(lato, variables.$general-light-font-color, 16px, 125%);
+}

@@ -2,7 +2,7 @@
 @use "../global/variables";
 
 .page-body {
-  @include fonts.set-font(lato, variables.$general-dark-font-color, 14px, 18px);
+  @include fonts.set-font(lato, variables.$general-font-color, 14px, 128.57%);
   background-color: variables.$primary-background-color;
   margin: 0;
   padding: 0;

@@ -1,0 +1,10 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.catalog-extra-item__title {
+  @include fonts.set-font(oswald, variables.$double-dark-grey-font-color, 16px, 100%, uppercase);
+}
+
+.catalog-extra-item__description {
+  @include fonts.set-font(lato, variables.$general-font-color, 14px, 100%);
+}
