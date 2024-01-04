@@ -1,0 +1,18 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.form {
+  @include fonts.set-font(oswald, variables.$general-font-color, 16px, 112.5%, uppercase);
+}
+
+.form__input {
+  @include fonts.set-font(oswald, variables.$general-font-color, 16px, 112.5%, uppercase);
+}
+
+.form__inner-title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 24px, 108.33%, initial);
+}
+
+.form__required-fields-note {
+  @include fonts.set-font(lato, variables.$general-title-color, 14px, 114.29%, initial);
+}

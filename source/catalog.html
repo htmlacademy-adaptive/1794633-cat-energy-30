@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи. Каталог продукции.</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
 <body class="page-body page-body--catalog">
@@ -240,12 +245,12 @@
           </table>
           <a class="catalog-card__button button button--primary" href="#" >заказать</a>
         </li>
-        <li class="catalog__item catalog-card catalog-card--more">
-          <a class="catalog-card__title-link" href="#">
-            <h3 class="catalog-card__title catalog-card__title--more">Показать еще 100500 товаров</h3>
+        <li class="catalog__item catalog-more-card">
+          <a class="catalog-more-card__title-link" href="#">
+            <h3 class="catalog-more-card__title">Показать еще 100500 товаров</h3>
           </a>
-          <p class="catalog-card__description">На самом деле вкусов гораздо больше!</p>
-          <a class="catalog-card__button button button--secondary" href="#" >заказать</a>
+          <p class="catalog-more-card__description">На самом деле вкусов гораздо больше!</p>
+          <a class="catalog-more-card__button button button--secondary" href="#" >заказать</a>
         </li>
       </ul>
     </section>
@@ -303,7 +308,7 @@
     <section class="main-footer__location location">
       <h2 class="visually-hidden">Адрес</h2>
 
-      <div class="location__business-card business-card">
+      <div class="location__business-card business-card business-card--grey">
         <p class="business-card__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="business-card__street">ул. Большая Конюшенная, д. 19/8
           <span class="business-card__city">Санкт-Петербург</span>

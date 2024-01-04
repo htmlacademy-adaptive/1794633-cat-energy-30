@@ -1,0 +1,14 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.example {
+  background-color: variables.$grey-background-color;
+}
+
+.example__title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+}
+
+.example__costs {
+  @include fonts.set-font(oswald, variables.$general-title-color, 14px, 142.86%, uppercase);
+}

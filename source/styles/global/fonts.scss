@@ -1,1 +1,41 @@
-/* здесь подключите шрифты*/
+@use "variables";
+
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@include font-face("Oswald", 400, normal, url("../../fonts/oswald/oswaldregular.woff2"));
+@include font-face("Lato", 400, normal, url("../../fonts/lato/Lato-Regular.woff2"));
+
+@mixin set-font($family, $color, $size, $height, $text-transform: none, $weight: 400) {
+  color: $color;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+
+  @if $family == lato {
+    font-family: variables.$lato-font-string;
+  }
+
+  @else if $family == oswald {
+    font-family: variables.$oswald-font-string;
+  }
+
+  @else {
+    @error "#{$family} недопустимо в миксине set-font";
+  }
+
+  @if $text-transform == uppercase {
+    text-transform: uppercase;
+  }
+
+  @else if $text-transform == initial {
+    text-transform: initial;
+  }
+}

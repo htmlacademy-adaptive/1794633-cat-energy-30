@@ -1,0 +1,27 @@
+@use "../global/fonts";
+@use "../global/variables";
+
+.button {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  border: none;
+
+  &--primary {
+    background-color: variables.$button-primary-color;
+
+    @include fonts.set-font(oswald, variables.$general-light-font-color, 16px, 125%, uppercase);
+  }
+
+  &--primary-s {
+    background-color: variables.$button-primary-color;
+
+    @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 128.57%, uppercase);
+  }
+
+  &--secondary {
+    background-color: variables.$button-secondary-color;
+
+    @include fonts.set-font(oswald, variables.$general-font-color, 16px, 125%, uppercase);
+  }
+}

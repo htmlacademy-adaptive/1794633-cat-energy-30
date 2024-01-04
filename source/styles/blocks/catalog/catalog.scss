@@ -1,0 +1,11 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+@use "../../global/common";
+
+.catalog__title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 36px, 100%);
+}
+
+.catalog__list {
+  @include common.reset-list;
+}

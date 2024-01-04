@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи. Подбор программы.</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles/styles.css">
   <script src="scripts/index.js" defer></script>
 </head>
-<body class="form-page page-container">
+<body class="page-body page-body--form">
   <header class="main-header">
     <nav class="main-header__nav">
       <div class="main-header__container">
@@ -32,7 +37,7 @@
     </nav>
   </header>
 
-  <main class="form-main">
+  <main class="main-container">
     <h1 class="visually-hidden">Подбор программы в магазине функционального питания для котов - "Кэт энерджи"</h1>
     <section class="program">
       <h2 class="program__title">Подбор программы</h2>
@@ -46,19 +51,19 @@
 
             <label class="cat-characteristics__item" for="cat-name">
               <span class="cat-characteristics__text">Имя:*</span>
-              <input class="cat-characteristics__input" type="text" name="cat-name" id="cat-name"
+              <input class="cat-characteristics__input form__input" type="text" name="cat-name" id="cat-name"
                 placeholder="Барсик" required>
             </label>
 
             <label class="cat-characteristics__item" for="weight">
               <span class="cat-characteristics__text">Вес (кг):*</span>
-              <input class="cat-characteristics__input" type="text" name="weight" id="weight" placeholder="7"
+              <input class="cat-characteristics__input form__input" type="text" name="weight" id="weight" placeholder="7"
                 required>
             </label>
 
             <label class="cat-characteristics__item" for="age">
               <span class="cat-characteristics__text">Возраст (лет):</span>
-              <input class="cat-characteristics__input" type="text" name="age" id="age" placeholder="7">
+              <input class="cat-characteristics__input form__input" type="text" name="age" id="age" placeholder="7">
             </label>
           </fieldset>
 
@@ -86,11 +91,11 @@
         </div>
 
         <fieldset class="form__contacts contacts">
-          <legend class="contacts__title">Контактные данные (владельца кота)</legend>
+          <legend class="form__inner-title">Контактные данные (владельца кота)</legend>
 
           <label class="contacts__item" for="email">
             <span class="contacts__text">E-mail:*</span>
-            <input class="contacts__input contacts__input--email"
+            <input class="contacts__input contacts__input--email form__input"
               type="text" name="email"
               id="email" placeholder="kuklachev@gmail.com"
               required>
@@ -98,20 +103,20 @@
 
           <label class="contacts__item" for="phone">
             <span class="contacts__text">Телефон:*</span>
-            <input class="contacts__input contacts__input--phone" type="tel" name="phone"
+            <input class="contacts__input contacts__input--phone form__input" type="tel" name="phone"
               id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="8 (960) 900-60-90" required>
           </label>
         </fieldset>
 
         <fieldset class="form__comments comments">
-          <legend class="comments__title">Комментарий</legend>
+          <legend class="form__inner-title">Комментарий</legend>
           <label class="comments__label" for="comments"></label>
-          <textarea class="comments__input" rows="6" id="comments" name="comment"
+          <textarea class="comments__input form__input" rows="6" id="comments" name="comment"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="form__extra extra-ingredients">
-          <legend class="extra-ingredients__title">Дополнительно</legend>
+          <legend class="form__inner-title">Дополнительно</legend>
 
           <label class="extra-ingredients__item" for="sweetener">
             <input class="extra-ingredients__input visually-hidden" type="checkbox" id="sweetener" value="sweetener"
@@ -151,7 +156,7 @@
     <section class="main-footer__location location">
       <h2 class="visually-hidden">Адрес</h2>
 
-      <div class="location__business-card business-card">
+      <div class="location__business-card business-card business-card--grey">
         <p class="business-card__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="business-card__street">ул. Большая Конюшенная, д. 19/8
           <span class="business-card__city">Санкт-Петербург</span>

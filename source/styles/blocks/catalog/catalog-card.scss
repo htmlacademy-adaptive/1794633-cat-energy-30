@@ -1,0 +1,15 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+@use "../../global/common";
+
+.catalog-card__title-link {
+  @include common.reset-link;
+}
+
+.catalog-card__title {
+  @include fonts.set-font(oswald, variables.$double-dark-grey-font-color, 16px, 125%, uppercase);
+}
+
+.catalog-card__table {
+  @include fonts.set-font(lato, variables.$dark-grey-font-color, 12px, 133.33%);
+}

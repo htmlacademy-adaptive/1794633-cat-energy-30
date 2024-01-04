@@ -1,0 +1,12 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+@use "../../global/common";
+
+.main-menu {
+  @include common.reset-list;
+}
+
+.main-menu__link {
+  @include fonts.set-font(oswald, variables.$general-title-color, 20px, 100%, uppercase);
+  @include common.reset-link;
+}

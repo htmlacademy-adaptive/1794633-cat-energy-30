@@ -1,0 +1,10 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+
+.program__title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 36px, 100%);
+}
+
+.program__description {
+  @include fonts.set-font(oswald, variables.$general-title-color, 14px, 128.57%, uppercase);
+}

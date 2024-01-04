@@ -1,7 +1,39 @@
 /* GLOBAL */
-@import "./global/variables.scss";
-@import "./global/global.scss";
-@import "./global/fonts.scss";
+@use "./global/variables";
+@use "./global/global";
+@use "./global/fonts";
+@use "./global/visually-hidden";
+@use "./global/common";
+@use "./global/button";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@use "./blocks/page-body";
+@use "./blocks/main-container";
+@use "./blocks/header/main-header";
+@use "./blocks/header/main-menu";
+@use "./blocks/index/advantages";
+@use "./blocks/index/diet";
+@use "./blocks/index/diets";
+@use "./blocks/index/example";
+@use "./blocks/index/example-slider";
+@use "./blocks/index/hero";
+@use "./blocks/index/results";
+@use "./blocks/catalog/catalog";
+@use "./blocks/catalog/catalog-card";
+@use "./blocks/catalog/catalog-extra";
+@use "./blocks/catalog/catalog-extra-item";
+@use "./blocks/catalog/catalog-gift";
+@use "./blocks/catalog/catalog-more-card";
+@use "./blocks/form/cat-characteristics";
+@use "./blocks/form/comments";
+@use "./blocks/form/contacts";
+@use "./blocks/form/diet-selector";
+@use "./blocks/form/extra-ingredients";
+@use "./blocks/form/form";
+@use "./blocks/form/program";
+@use "./blocks/footer/business-card";
+@use "./blocks/footer/copyright";
+@use "./blocks/footer/footer-links";
+@use "./blocks/footer/location";
+@use "./blocks/footer/main-footer";
+@use "./blocks/footer/socials";
