@@ -1,0 +1,10 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+@use "../../global/common";
+
+.socials {
+  @include common.reset-list;
+
+  display: flex;
+  gap: 24px;
+}

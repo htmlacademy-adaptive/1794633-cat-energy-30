@@ -4,8 +4,54 @@
 
 .advantages__list {
   @include common.reset-list;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .advantages__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+}
+
+.advantages__item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    background-color: variables.$general-green-background-color;
+  }
+
+  &--leaf {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#advantages-leaf");
+      background-size: 30px 32px;
+    }
+  }
+
+  &--powder {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#advantages-powder");
+      background-size: 27px 29px;
+    }
+  }
+
+  &--cutlery {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#advantages-cutlery");
+      background-size: 26px 30px;
+    }
+  }
+
+  &--timer {
+    &::before {
+      background-image: url("../../images/icons/stack.svg#advantages-timer");
+      background-size: 26px 30px;
+    }
+  }
 }
