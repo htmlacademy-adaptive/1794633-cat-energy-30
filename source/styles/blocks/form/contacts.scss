@@ -1,0 +1,41 @@
+@use "../../global/variables";
+@use "../../global/common";
+
+.contacts {
+  @include common.reset-fieldset;
+  gap: 14px;
+}
+
+.contacts__item {
+  display: flex;
+  gap: 13px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: variables.$form-input-icon-color;
+    width: 20px;
+    height: 20px;
+  }
+
+  &--email {
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#input-email");
+    }
+  }
+
+  &--phone {
+    &::after {
+      mask-image: url("../../images/icons/stack.svg#input-phone");
+    }
+  }
+}
+
+.contacts__input {
+  flex-grow: 1;
+}

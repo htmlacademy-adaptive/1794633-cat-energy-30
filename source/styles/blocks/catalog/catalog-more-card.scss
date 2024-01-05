@@ -2,6 +2,19 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+.catalog-more-card {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#catalog-plus-sign");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .catalog-more-card__title-link {
   @include common.reset-link;
 }

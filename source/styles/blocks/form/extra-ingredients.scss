@@ -1,0 +1,7 @@
+@use "../../global/variables";
+@use "../../global/common";
+
+.extra-ingredients {
+  @include common.reset-fieldset;
+  gap: 13px;
+}

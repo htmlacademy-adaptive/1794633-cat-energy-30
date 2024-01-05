@@ -1,0 +1,7 @@
+@use "../../global/variables";
+@use "../../global/common";
+
+.diet-selector {
+  @include common.reset-fieldset;
+  gap: 13px;
+}

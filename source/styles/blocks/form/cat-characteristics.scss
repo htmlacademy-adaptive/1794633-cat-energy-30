@@ -1,0 +1,16 @@
+@use "../../global/variables";
+@use "../../global/common";
+
+.cat-characteristics {
+  @include common.reset-fieldset;
+  gap: 14px;
+}
+
+.cat-characteristics__item {
+  display: flex;
+  gap: 13px;
+}
+
+.cat-characteristics__input {
+  flex-grow: 1;
+}

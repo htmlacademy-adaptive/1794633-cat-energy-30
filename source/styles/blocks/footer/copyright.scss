@@ -1,0 +1,21 @@
+@use "../../global/fonts";
+@use "../../global/variables";
+@use "../../global/common";
+
+.copyright {
+  @include common.reset-link;
+
+  display: flex;
+
+  &::after {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#academy-footer-logo");
+    background-repeat: no-repeat;
+    width: 27px;
+    height: 34px;
+  }
+}
+
+.copyright__title {
+  @include fonts.set-font(lato, variables.$general-font-color, 16px, 125%);
+}

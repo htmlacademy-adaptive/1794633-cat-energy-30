@@ -9,3 +9,10 @@
   font-style: normal;
   display: inline-block;
 }
+
+@mixin reset-fieldset() {
+  border: none;
+  //padding: 0;
+  display: flex;
+  flex-direction: column;
+}
