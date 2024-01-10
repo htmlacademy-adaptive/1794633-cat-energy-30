@@ -3,29 +3,70 @@
 
 .diet {
   background-color: variables.$grey-background-color;
+  padding: 24px 33px 18px 20px;
+
+  @media (min-width: variables.$tablet) {
+    padding: 77px 29px 57px 52px;
+  }
 }
 
 .diet__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 154.17%, uppercase);
   display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
 
-  &--slim {
-    &::before {
-      content: "";
-      background-image: url("../../images/icons/stack.svg#diet-cat-slim");
-      background-repeat: no-repeat;
-      width: 50px;
-      height: 53px;
+  @media (min-width: variables.$tablet) {
+    font-size: 36px;
+    line-height: 100%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    gap: 62px;
+  }
+
+  &--slim::before {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#diet-cat-slim");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 53px;
+
+    @media (min-width: variables.$tablet) {
+      position: absolute;
+      width: 200px;
+      height: 211px;
+      left: 65%;
+      top: 13px;
+    }
+
+    @media (min-width: variables.$desktop) {
+      position: initial;
+      width: 100px;
+      height: 106px;
     }
   }
 
-  &--weight {
-    &::before {
-      content: "";
-      background-image: url("../../images/icons/stack.svg#diet-cat-weight");
-      background-repeat: no-repeat;
-      width: 67px;
-      height: 50px;
+  &--weight::before {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#diet-cat-weight");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 50px;
+
+    @media (min-width: variables.$tablet) {
+      position: absolute;
+      width: 268px;
+      height: 200px;
+      left: 60%;
+      top: 13px;
+    }
+
+    @media (min-width: variables.$desktop) {
+      position: initial;
+      width: 134px;
+      height: 100px;
     }
   }
 }
@@ -36,11 +77,27 @@
   display: flex;
   gap: 15px;
 
+  @media (min-width: variables.$tablet) {
+    font-size: 20px;
+  }
+
   &::after {
     content: "";
     background-image: url("../../images/icons/stack.svg#link-arrow-short");
     background-repeat: no-repeat;
     width: 24px;
     height: 12px;
+  }
+}
+
+.diet__description {
+  @media (min-width: variables.$tablet) {
+    font-size: 16px;
+    line-height: 150%;
+    width: 40%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: initial;
   }
 }

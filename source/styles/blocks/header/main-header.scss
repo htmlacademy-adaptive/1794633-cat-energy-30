@@ -1,9 +1,55 @@
+@use "../../global/variables";
+
+.main-header__nav {
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding: 56px 100px 28px 100px;
+  }
+}
+
+.main-header__container {
+  @media (max-width: variables.$tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 13px 20px 14px 20px;
+  }
+}
+
 .main-header__menu-toggle {
-  background-image: url("../../images/icons/stack.svg#navigation-menu-open");
-  background-repeat: no-repeat;
+  background-color: variables.$form-input-icon-color;
   border: none;
-  width: 18px;
-  height: 18px;
-  padding: 0;
   cursor: pointer;
+  mask-image: url("../../images/icons/stack.svg#navigation-menu-close");
+  width: 20px;
+  height: 20px;
+
+  &--closed {
+    mask-image: url("../../images/icons/stack.svg#navigation-menu-open");
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: variables.$tablet) {
+    display: none;
+  }
+}
+
+.main-header__menu {
+  @media (max-width: variables.$tablet) {
+    position: absolute;
+    background-color: variables.$primary-background-color;
+    width: 100%;
+
+    &--closed {
+      display: none;
+    }
+  }
 }

@@ -7,4 +7,20 @@
   margin: 0;
   padding: 0;
   height: 100%;
+  min-width: variables.$mobile;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-body--index {
+  @media (min-width: variables.$desktop) {
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../images/index/hero/hero-cat-desktop@1x.webp"),
+      linear-gradient(rgb(76, 74, 79), rgb(76, 74, 79));
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: top;
+    background-size: 50% 694px, auto 694px, 50% 694px;
+  }
 }

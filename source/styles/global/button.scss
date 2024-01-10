@@ -2,26 +2,25 @@
 @use "../global/variables";
 
 .button {
+  @include fonts.set-font(oswald, variables.$general-light-font-color, 16px, 125%, uppercase);
   text-decoration: none;
   text-align: center;
   display: block;
   border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 20px;
+    line-height: 130%;
+  }
 
   &--primary {
     background-color: variables.$button-primary-color;
-
-    @include fonts.set-font(oswald, variables.$general-light-font-color, 16px, 125%, uppercase);
-  }
-
-  &--primary-s {
-    background-color: variables.$button-primary-color;
-
-    @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 128.57%, uppercase);
   }
 
   &--secondary {
     background-color: variables.$button-secondary-color;
-
-    @include fonts.set-font(oswald, variables.$general-font-color, 16px, 125%, uppercase);
+    color: variables.$general-font-color;
   }
 }

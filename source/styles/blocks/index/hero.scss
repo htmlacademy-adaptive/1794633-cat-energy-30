@@ -1,19 +1,87 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
+
+$smoothing-background-color: rgb(70, 70, 70);
 
 .hero {
-  /*temporary coloring for font contrast*/
-  background-color: variables.$hero-background-color;
+  min-width: variables.$mobile;
+  z-index: -1;
+
+  @media (max-width: variables.$tablet) {
+    position: relative;
+    background-image:
+      linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+      url("../../images/index/hero/hero-cat@1x.webp"),
+      linear-gradient($smoothing-background-color, $smoothing-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: inherit;
+    background-size: auto 302px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: variables.$tablet) {
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-bottom: 250px;
+    width: 40%;
+  }
+}
+
+.hero__container {
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet) {
+    padding: 0 110px;
+  }
 }
 
 .hero__title {
   @include fonts.set-font(oswald, variables.$general-light-font-color, 36px, 100%);
+  @include common.reset-title;
+  text-align: center;
+
+  @media (min-width: variables.$tablet) {
+    @include fonts.set-font(oswald, variables.$general-light-font-color, 60px, 100%);
+    color: variables.$general-title-color;
+    text-align: initial;
+  }
 }
 
 .hero__slogan {
   @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 100%, uppercase);
+  text-align: center;
+  margin-top: 25px;
+
+  @media (min-width: variables.$tablet) {
+    @include fonts.set-font(oswald, variables.$general-light-font-color, 20px, 100%, uppercase);
+    color: variables.$general-title-color;
+    text-align: initial;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet) {
+    position: absolute;
+    z-index: -1;
+  }
+
+  @media (min-width: variables.$desktop) {
+    transform: translate(75%, -50%);
+  }
 }
 
 .hero__button {
-  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 128.57%, uppercase);
+  @media (min-width: variables.$tablet) {
+    width: 244px;
+  }
 }

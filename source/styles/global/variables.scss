@@ -1,3 +1,7 @@
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
 $oswald-font-string: "Oswald", "Arial", "Helvetica", sans-serif;
 $lato-font-string: "Lato", "Arial", "Helvetica", sans-serif;
 
@@ -11,6 +15,7 @@ $dark-grey-font-color: #444444;
 $general-font-color: #444444;
 $general-light-font-color: #ffffff;
 $button-primary-color: $general-green-background-color;
+$menu-line-color: #e6e6e6;
 
 $button-secondary-color: #f2f2f2;
 $grey-background-color: #f2f2f2;

@@ -12,7 +12,11 @@
 
 @mixin reset-fieldset() {
   border: none;
-  //padding: 0;
   display: flex;
   flex-direction: column;
+}
+
+@mixin reset-title() {
+  margin-top: 0;
+  margin-bottom: 0;
 }

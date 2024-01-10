@@ -1,5 +1,35 @@
 @use "../../global/common";
+@use "../../global/variables";
+
+.diets {
+  min-width: variables.$mobile;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: variables.$tablet) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
 
 .diets__list {
   @include common.reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet) {
+    gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }

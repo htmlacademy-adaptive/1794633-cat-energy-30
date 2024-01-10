@@ -4,9 +4,37 @@
 
 .main-menu {
   @include common.reset-list;
+
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    gap: 33px;
+  }
+}
+
+.main-menu__item {
+  @media (max-width: variables.$tablet) {
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 24px;
+    border-top: 1px solid variables.$menu-line-color;
+
+    &:last-child {
+      border-bottom: 1px solid variables.$menu-line-color;
+    }
+  }
 }
 
 .main-menu__link {
   @include fonts.set-font(oswald, variables.$general-title-color, 20px, 100%, uppercase);
   @include common.reset-link;
+
+  @media (min-width: variables.$tablet) {
+    @include fonts.set-font(oswald, variables.$general-title-color, 18px, 133.33%, uppercase);
+  }
+
+  @media (min-width: variables.$desktop) {
+    font-size: 20px;
+    line-height: 100%;
+    color: variables.$general-light-font-color;
+  }
 }
