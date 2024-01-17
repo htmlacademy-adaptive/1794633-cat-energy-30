@@ -3,16 +3,63 @@
 
 .business-card {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  @media (min-width: variables.$desktop) {
+    padding-right: initial;
+    padding-left: initial;
+    min-width: 565px;
+    width: 30vw;
+    position: absolute;
+    top: 95px;
+    left: variables.$cup-container-padding-desktop;
+    background-color: variables.$primary-background-color;
+  }
 }
 
-.business-card--grey {
+.business-card--catalog {
   background-color: variables.$grey-background-color;
+
+  @media (min-width: variables.$desktop) {
+    background-color: variables.$primary-background-color;
+  }
 }
 
 .business-card__title {
   @include fonts.set-font(oswald, variables.$triple-dark-grey-font-color, 16px, 125%, uppercase);
+  width: 140px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 20px;
+    line-height: 130%;
+    width: 163px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-left: 80px;
+  }
 }
 
 .business-card__street {
-  @include fonts.set-font(lato, variables.$general-font-color, 16px, 142.86%);
+  @include fonts.set-font(lato, variables.$general-font-color, 14px, 142.86%);
+  text-align: left;
+  width: 140px;
+
+  @media (min-width: variables.$tablet) {
+    width: 157px;
+    text-align: right;
+    font-size: 16px;
+    line-height: 125%;
+    padding-right: 40px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    text-align: left;
+    padding-right: 80px;
+  }
 }

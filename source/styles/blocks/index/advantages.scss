@@ -2,21 +2,74 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+.advantages {
+  padding-bottom: 49px;
+}
+
 .advantages__list {
   @include common.reset-list;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  counter-reset: section 0;
+
+  @media (min-width: variables.$tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 30vw);
+    grid-template-rows: repeat(2, 280px);
+    grid-column-gap: 137px;
+    grid-row-gap: 37px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
 }
 
 .advantages__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    line-height: 100%;
+  }
 }
 
 .advantages__item {
   display: flex;
   gap: 20px;
   align-items: center;
+
+  @media (min-width: variables.$tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    gap: 31px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    max-width: 240px;
+    height: 280px;
+  }
+
+
+  &::after {
+    @media (min-width: variables.$tablet) {
+      @include fonts.set-font(oswald, variables.$grey-background-color, 280px, 100%);
+      counter-increment: section 1;
+      content: counter(section);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
 
   &::before {
     content: "";
@@ -25,19 +78,25 @@
     width: 60px;
     height: 60px;
     background-color: variables.$general-green-background-color;
+    flex-shrink: 0;
+
+    @media (min-width: variables.$tablet) {
+      width: 80px;
+      height: 80px;
+    }
   }
 
   &--leaf {
     &::before {
       background-image: url("../../images/icons/stack.svg#advantages-leaf");
-      background-size: 30px 32px;
+      background-size: 25px 28px;
     }
   }
 
   &--powder {
     &::before {
       background-image: url("../../images/icons/stack.svg#advantages-powder");
-      background-size: 27px 29px;
+      background-size: 26px 29px;
     }
   }
 

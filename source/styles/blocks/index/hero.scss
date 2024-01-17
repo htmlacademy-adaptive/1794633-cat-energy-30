@@ -5,10 +5,9 @@
 $smoothing-background-color: rgb(70, 70, 70);
 
 .hero {
-  min-width: variables.$mobile;
   z-index: -1;
 
-  @media (max-width: variables.$tablet) {
+  @media (max-width: variables.$tablet - 1) {
     position: relative;
     background-image:
       linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
@@ -29,14 +28,6 @@ $smoothing-background-color: rgb(70, 70, 70);
   @media (min-width: variables.$desktop) {
     padding-bottom: 250px;
     width: 40%;
-  }
-}
-
-.hero__container {
-  padding: 0 20px;
-
-  @media (min-width: variables.$tablet) {
-    padding: 0 110px;
   }
 }
 

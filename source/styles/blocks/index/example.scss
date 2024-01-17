@@ -2,13 +2,95 @@
 @use "../../global/variables";
 
 .example {
-  background-color: variables.$grey-background-color;
+  background-color: variables.$example-background-color;
+  padding-top: 25px;
+
+  @media (min-width: variables.$tablet) {
+    background-color: variables.$primary-background-color;
+    background-image: linear-gradient(to bottom, variables.$primary-background-color 618px, variables.$example-background-color 618px);
+  }
+
+  @media (min-width: variables.$desktop) {
+    background-image: linear-gradient(variables.$primary-background-color 191px, variables.$example-background-color 191px);
+
+    @media (min-width: variables.$desktop) {
+      position: relative;
+    }
+  }
+}
+
+.example__slider {
+  @media (min-width: variables.$desktop) {
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+}
+
+.example__results-wrapper {
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: column;
+    width: 35vw;
+    align-items: flex-start;
+  }
+}
+
+.example__results {
+  margin-bottom: 34px;
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 60px;
+  }
 }
 
 .example__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+  margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    line-height: 100%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__description {
+  @media (min-width: variables.$tablet) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 40vw;
+    margin-bottom: 69px;
+  }
 }
 
 .example__costs {
   @include fonts.set-font(oswald, variables.$general-title-color, 14px, 142.86%, uppercase);
+  text-align: center;
+  margin-top: 0;
+
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 100%;
+    gap: 9px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: row;
+  }
 }

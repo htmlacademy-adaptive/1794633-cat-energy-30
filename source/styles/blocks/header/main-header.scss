@@ -5,21 +5,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 30px;
+    padding: 25px variables.$cup-container-padding-tablet;
   }
 
   @media (min-width: variables.$desktop) {
-    padding: 56px 100px 28px 100px;
+    padding: 56px variables.$cup-container-padding-desktop 28px;
   }
 }
 
 .main-header__container {
-  @media (max-width: variables.$tablet) {
+  @media (max-width: variables.$tablet - 1) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 13px 20px 14px 20px;
+    padding: 13px variables.$cup-container-padding-mobile 14px variables.$cup-container-padding-mobile;
+    min-width: variables.$mobile;
   }
 }
 
@@ -43,7 +44,7 @@
 }
 
 .main-header__menu {
-  @media (max-width: variables.$tablet) {
+  @media (max-width: variables.$tablet - 1) {
     position: absolute;
     background-color: variables.$primary-background-color;
     width: 100%;

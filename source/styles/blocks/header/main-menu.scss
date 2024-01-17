@@ -5,6 +5,11 @@
 .main-menu {
   @include common.reset-list;
 
+  @media (max-width: variables.$tablet - 1) {
+    //padding-left: 0;
+    //padding-right: 0;
+  }
+
   @media (min-width: variables.$tablet) {
     display: flex;
     gap: 33px;
@@ -12,7 +17,7 @@
 }
 
 .main-menu__item {
-  @media (max-width: variables.$tablet) {
+  @media (max-width: variables.$tablet - 1) {
     text-align: center;
     padding-top: 22px;
     padding-bottom: 24px;

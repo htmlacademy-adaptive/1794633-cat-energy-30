@@ -6,6 +6,16 @@
   @include common.reset-link;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet) {
+    border: none;
+    padding: 0;
+    gap: 23px;
+  }
 
   &::after {
     content: "";
