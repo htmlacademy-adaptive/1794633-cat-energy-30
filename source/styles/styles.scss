@@ -6,6 +6,8 @@
 @use "./global/common";
 @use "./global/button";
 @use "./global/cup-container";
+@use "./global/crossed-title";
+@use "./global/form-label";
 
 /* BLOCKS */
 @use "./blocks/page-body";
@@ -36,5 +38,4 @@
 @use "./blocks/footer/copyright";
 @use "./blocks/footer/footer-links";
 @use "./blocks/footer/location";
-@use "./blocks/footer/main-footer";
 @use "./blocks/footer/socials";

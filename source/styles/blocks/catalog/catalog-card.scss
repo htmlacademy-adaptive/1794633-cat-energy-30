@@ -2,14 +2,111 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+$gradient-start-position: 70px;
+
+.catalog-card {
+  padding-bottom: 25px;
+
+  @media (max-width: variables.$tablet - 1) {
+    border-top: 1px solid variables.$catalog-card-divider-color;
+    border-bottom: 1px solid variables.$catalog-card-divider-color;
+  }
+
+  @media (min-width: variables.$tablet) {
+    background-color: variables.$example-background-color;
+    margin-top: 81px;
+  }
+}
+
+.catalog-card__inner {
+  @media (min-width: variables.$tablet) {
+    padding-left: 37px;
+    padding-right: 37px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.catalog-card__data-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    gap: 22px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 31px;
+  }
+}
+
+.catalog-card__image-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: variables.$tablet) {
+    width: 200px;
+    height: 210px;
+    position: relative;
+    top: -70px;
+  }
+}
+
+.catalog-card__image {
+  display: block;
+}
+
+.catalog-card__text-wrapper {
+  width: 100%;
+}
+
 .catalog-card__title-link {
   @include common.reset-link;
+  margin: 0 auto;
+  display: block;
 }
 
 .catalog-card__title {
   @include fonts.set-font(oswald, variables.$double-dark-grey-font-color, 16px, 125%, uppercase);
+
+  @media (min-width: variables.$tablet) {
+    text-align: center;
+    font-size: 20px;
+    line-height: 120%;
+  }
 }
 
 .catalog-card__table {
   @include fonts.set-font(lato, variables.$dark-grey-font-color, 12px, 133.33%);
+
+  width: 100%;
+}
+
+.catalog-card__table-body {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 16px;
+    line-height: 125%;
+    gap: 5px;
+  }
+}
+
+.catalog-card__table-row {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: variables.$tablet) {
+    border-bottom: 1px solid variables.$catalog-item-table-underline-color;
+  }
+}
+
+.catalog-card__button {
+  @media (min-width: variables.$tablet) {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
 }

@@ -4,10 +4,23 @@
 .contacts {
   @include common.reset-fieldset;
   gap: 14px;
+
+  @media (min-width: variables.$desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+.contacts__title {
+  margin-bottom: 38px;
+}
+
+.contacts__title-text {
+  width: 187px;
 }
 
 .contacts__item {
-  display: flex;
   gap: 13px;
   position: relative;
 
@@ -32,6 +45,12 @@
   &--phone {
     &::after {
       mask-image: url("../../images/icons/stack.svg#input-phone");
+    }
+  }
+
+  @media (min-width: variables.$desktop) {
+    &:nth-child(odd) {
+      margin-left: 80px;
     }
   }
 }

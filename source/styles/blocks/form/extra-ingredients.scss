@@ -4,4 +4,13 @@
 .extra-ingredients {
   @include common.reset-fieldset;
   gap: 13px;
+
+  @media (min-width: variables.$desktop) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.extra-ingredients__title {
+  margin-bottom: 34px;
 }

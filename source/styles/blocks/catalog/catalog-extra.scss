@@ -2,10 +2,55 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+.catalog-extra {
+  margin-top: 25px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 70px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 76px;
+  }
+}
+
+.catalog-extra__inner {
+  @media (min-width: variables.$desktop) {
+    display: flex;
+    justify-content: space-between;
+    gap: 81px;
+    margin-top: 80px;
+    margin-bottom: 87px;
+  }
+}
+
 .catalog-extra__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 100%);
+
+  @media (min-width: variables.$tablet) {
+    font-size: 36px;
+  }
 }
 
 .catalog-extra__list {
   @include common.reset-list;
+
+  @media (min-width: variables.$desktop) {
+    flex-grow: 1;
+  }
+}
+
+.catalog-extra__gift {
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 70px;
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

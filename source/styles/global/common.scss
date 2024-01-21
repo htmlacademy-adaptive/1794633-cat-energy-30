@@ -14,9 +14,16 @@
   border: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
 
 @mixin reset-title() {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin reset-p() {
   margin-top: 0;
   margin-bottom: 0;
 }

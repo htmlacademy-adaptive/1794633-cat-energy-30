@@ -5,14 +5,19 @@
 .main-menu {
   @include common.reset-list;
 
-  @media (max-width: variables.$tablet - 1) {
-    //padding-left: 0;
-    //padding-right: 0;
-  }
-
   @media (min-width: variables.$tablet) {
     display: flex;
     gap: 33px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    &--index .main-menu__link {
+      color: variables.$general-light-font-color;
+
+      &--active::after {
+        background-color: variables.$general-light-font-color;
+      }
+    }
   }
 }
 
@@ -33,13 +38,36 @@
   @include fonts.set-font(oswald, variables.$general-title-color, 20px, 100%, uppercase);
   @include common.reset-link;
 
+  display: block;
+  position: relative;
+  padding: 22px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: variables.$tablet) {
     @include fonts.set-font(oswald, variables.$general-title-color, 18px, 133.33%, uppercase);
+    padding: 0;
+
+    &--active::after {
+      content: "";
+      display: block;
+      background-color: variables.$link-active-underline-dark-color;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -9px;
+    }
   }
 
   @media (min-width: variables.$desktop) {
     font-size: 20px;
     line-height: 100%;
-    color: variables.$general-light-font-color;
+    padding: 0;
   }
 }

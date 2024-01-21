@@ -1,6 +1,30 @@
 @use "../../global/variables";
 @use "../../global/common";
+@use "../../global/fonts";
 
 .comments {
   @include common.reset-fieldset;
+}
+
+.comments-title {
+  margin-bottom: 38px;
+}
+
+.comments__input {
+  @include fonts.set-font(oswald, variables.$general-font-color, 16px, 112.5%, uppercase);
+  padding: 14px 15px 13px;
+  border: 1px solid variables.$form-input-border-color;
+
+  &::placeholder {
+    text-align: center;
+    color: inherit;
+    font-size: 20px;
+    line-height: 100%;
+  }
+
+  @media (min-width: variables.$tablet) {
+    &::placeholder {
+      text-align: left;
+    }
+  }
 }

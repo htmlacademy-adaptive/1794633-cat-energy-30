@@ -4,8 +4,24 @@
 
 .catalog__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 100%);
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    margin-bottom: 84px;
+  }
 }
 
 .catalog__list {
   @include common.reset-list;
+
+  @media (min-width: variables.$tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+  }
 }

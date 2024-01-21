@@ -23,7 +23,7 @@
   @media (min-width: variables.$desktop) {
     position: absolute;
     top: 40px;
-    right: 0;
+    right: variables.$cup-container-padding-desktop;
   }
 }
 
@@ -37,7 +37,7 @@
 
   @media (min-width: variables.$desktop) {
     flex-direction: column;
-    width: 35vw;
+    width: 25vw;
     align-items: flex-start;
   }
 }
@@ -71,7 +71,7 @@
   }
 
   @media (min-width: variables.$desktop) {
-    width: 40vw;
+    width: 29vw;
     margin-bottom: 69px;
   }
 }
@@ -92,5 +92,6 @@
 
   @media (min-width: variables.$desktop) {
     flex-direction: row;
+    gap: 63px;
   }
 }

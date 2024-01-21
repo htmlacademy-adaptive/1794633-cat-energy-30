@@ -1,14 +1,40 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .catalog-gift {
-  // temporary background color
-  background-color: variables.$hero-background-color;
+  display: flex;
+  align-items: center;
+
+  min-height: 290px;
+  background-image:
+    linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+    url("../../images/catalog/catalog-gift/cat-backpack@1x.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url(".../../images/catalog/catalog-gift/cat-backpack@2x.webp");
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 18vw;
+  }
 }
 
 .catalog-gift__description {
+  @include common.reset-p;
+  padding: 59px 61px 43px 58px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-grow: 1;
+  text-align: center;
 
   @include fonts.set-font(lato, variables.$general-light-font-color, 16px, 125%);
 
@@ -18,5 +44,10 @@
     background-repeat: no-repeat;
     width: 78px;
     height: 81px;
+  }
+
+  @media (min-width: variables.$tablet) and (max-width: variables.$desktop - 1) {
+    flex-direction: row;
+    padding: 57px 125px 69px 77px;
   }
 }

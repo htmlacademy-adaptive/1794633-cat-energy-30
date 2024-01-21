@@ -1,10 +1,87 @@
 @use "../../global/fonts";
 @use "../../global/variables";
 
+.catalog-extra-item {
+  padding-bottom: 19px;
+  border-top: 1px solid variables.$example-border-color;
+
+  &:last-child {
+    border-bottom: 1px solid variables.$example-border-color;
+  }
+
+  @media (min-width: variables.$tablet) {
+    padding-bottom: 28px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-top: 15px;
+    padding-bottom: 17px;
+  }
+}
+
+.catalog-extra-item__inner {
+  @media (min-width: variables.$tablet) and (max-width: variables.$desktop - 1) {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.catalog-extra-item__data-wrapper {
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  @media (min-width: variables.$desktop) {
+    gap: 20px;
+  }
+}
+
 .catalog-extra-item__title {
   @include fonts.set-font(oswald, variables.$double-dark-grey-font-color, 16px, 100%, uppercase);
+
+  @media (min-width: variables.$desktop) {
+    flex-grow: 1;
+  }
 }
 
 .catalog-extra-item__description {
   @include fonts.set-font(lato, variables.$general-font-color, 14px, 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog-extra-item__property {
+  @media (min-width: variables.$desktop) {
+    text-align: left;
+    min-width: 220px;
+  }
+}
+
+
+.catalog-extra-item__value {
+  @media (min-width: variables.$tablet) {
+    min-width: 93px;
+    text-align: right;
+  }
+
+  @media (min-width: variables.$desktop) {
+    min-width: 62px;
+  }
+}
+
+.catalog-extra-item__button {
+  @media (min-width: variables.$desktop) {
+    width: 244px;
+  }
 }

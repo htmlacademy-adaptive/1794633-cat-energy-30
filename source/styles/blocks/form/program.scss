@@ -1,10 +1,29 @@
 @use "../../global/fonts";
 @use "../../global/variables";
 
+.program__form {
+  margin-bottom: 32px;
+}
+
 .program__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 100%);
+
+  margin-bottom: 37px;
 }
 
 .program__description {
   @include fonts.set-font(oswald, variables.$general-title-color, 14px, 128.57%, uppercase);
+
+  margin-top: 0;
+  margin-bottom: 39px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 20px;
+    line-height: 150%;
+    width: 40vw;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 25vw;
+  }
 }
