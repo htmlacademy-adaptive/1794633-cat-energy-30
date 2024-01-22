@@ -10,17 +10,37 @@
   padding-top: 10px;
   padding-bottom: 10px;
 
-  @media (min-width: variables.$tablet) {
-    font-size: 20px;
-    line-height: 130%;
+  &--general-size {
+    @media (min-width: variables.$tablet) {
+      font-size: 20px;
+      line-height: 130%;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
   }
 
-  &--primary {
+  &--primary-color {
     background-color: variables.$button-primary-color;
+
+    &:hover {
+      background-color: variables.$button-primary-hover-color;
+    }
+
+    &:active .button__description {
+      opacity: 0.3;
+    }
   }
 
-  &--secondary {
+  &--secondary-color {
     background-color: variables.$button-secondary-color;
     color: variables.$general-font-color;
+
+    &:hover {
+      background-color: variables.$button-secondary-hover-color;
+    }
+
+    &:active .button__description {
+      opacity: 0.3;
+    }
   }
 }

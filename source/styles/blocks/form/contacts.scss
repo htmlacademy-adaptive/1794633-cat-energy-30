@@ -31,7 +31,7 @@
     right: 12px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: variables.$form-input-icon-color;
+    background-color: variables.$double-dark-grey-font-color;
     width: 20px;
     height: 20px;
   }
@@ -48,10 +48,23 @@
     }
   }
 
+  &--email:focus-within,
+  &--phone:focus-within {
+    &::after {
+      background-color: variables.$button-primary-color;
+    }
+  }
+
   @media (min-width: variables.$desktop) {
     &:nth-child(odd) {
       margin-left: 80px;
     }
+  }
+}
+
+.form-label:has(.form-label__input:invalid) {
+  &::after {
+    background-color: variables.$form-invalid-input-icon-color;
   }
 }
 

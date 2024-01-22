@@ -19,11 +19,22 @@
 
   &::after {
     content: "";
-    background-image: url("../../images/icons/stack.svg#academy-footer-logo");
+    mask-image: url("../../images/icons/stack.svg#academy-footer-logo");
+    background-color: variables.$footer-html-link-color;
     background-repeat: no-repeat;
     width: 27px;
     height: 34px;
   }
+}
+
+.copyright:hover {
+  &::after {
+    background-color: variables.$footer-social-link-hover-color;
+  }
+}
+
+.copyright:active {
+  opacity: 0.3;
 }
 
 .copyright__title {

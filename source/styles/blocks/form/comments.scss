@@ -22,6 +22,20 @@
     line-height: 100%;
   }
 
+  &:hover {
+    border-color: variables.$form-input-hover-color;
+  }
+
+  &:focus {
+    border-color: variables.$form-input-focus-color;
+    outline: 1px solid variables.$form-input-focus-color;
+  }
+
+  &:invalid {
+    border-color: variables.$form-invalid-input-icon-color;
+    outline: 1px solid variables.$form-invalid-input-icon-color;
+  }
+
   @media (min-width: variables.$tablet) {
     &::placeholder {
       text-align: left;

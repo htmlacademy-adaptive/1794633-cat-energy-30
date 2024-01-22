@@ -16,3 +16,13 @@
     padding: 0;
   }
 }
+
+.socials__link {
+  &:hover path {
+    fill: variables.$footer-social-link-hover-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

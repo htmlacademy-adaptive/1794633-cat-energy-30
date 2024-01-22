@@ -23,7 +23,7 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 1px solid #cdcdcd;
+    border: 1px solid variables.$form-radiobutton-outer-color;
 
     @media (min-width: variables.$tablet) {
       width: 40px;
@@ -36,7 +36,7 @@
     width: 13px;
     height: 13px;
     border-radius: 50%;
-    background-color: #68b738;
+    background-color: variables.$form-radiobutton-inner-color;
     position: absolute;
     left: 8.5px;
     display: none;
@@ -48,15 +48,13 @@
     }
   }
 
-
   // Чекбоксы
-
   &--checkbox::before {
     content: "";
     display: block;
     width: 30px;
     height: 30px;
-    border: 1px solid #cdcdcd;
+    border: 1px solid variables.$form-radiobutton-outer-color;
 
     @media (min-width: variables.$tablet) {
       width: 40px;
@@ -90,10 +88,27 @@
   padding: 14px 15px 13px;
   border: 1px solid variables.$form-input-border-color;
 
+  @media (min-width: variables.$tablet) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
   &::placeholder {
     color: inherit;
-    font-size: 20px;
-    line-height: 100%;
+  }
+
+  &:hover {
+    border-color: variables.$form-input-hover-color;
+  }
+
+  &:focus {
+    border-color: variables.$form-input-focus-color;
+    outline: 1px solid variables.$form-input-focus-color;
+  }
+
+  &:invalid {
+    border-color: variables.$form-invalid-input-icon-color;
+    outline: 1px solid variables.$form-invalid-input-icon-color;
   }
 }
 
@@ -107,4 +122,14 @@
   &::after {
     display: block;
   }
+}
+
+.form-label:hover .form-label__name {
+  &::before {
+    border-color: variables.$form-radiobutton-hover-color;
+  }
+}
+
+.extra-ingredients__input:disabled + .form-label__name {
+  opacity: 0.3;
 }

@@ -102,7 +102,7 @@
 
         <fieldset class="form__contacts contacts">
           <legend class="form__inner-title contacts__title crossed-title">
-            <span class="contacts__title-text crossed-title__text">Контактные данные (владельца кота)</span>
+            <span class="contacts__title-text crossed-title__text crossed-title__text--form">Контактные данные (владельца кота)</span>
           </legend>
 
           <label class="contacts__item contacts__item--email form-label" for="email">
@@ -122,7 +122,7 @@
 
         <fieldset class="form__comments comments">
           <legend class="form__inner-title comments-title crossed-title">
-            <span class="comments__title-text crossed-title__text">Комментарий</span>
+            <span class="comments__title-text crossed-title__text crossed-title__text--form">Комментарий</span>
           </legend>
           <label class="comments__label form-label" for="comments"></label>
           <textarea class="comments__input" rows="6" id="comments" name="comment"
@@ -131,7 +131,7 @@
 
         <fieldset class="form__extra extra-ingredients">
           <legend class="form__inner-title extra-ingredients__title crossed-title">
-            <span class="extra-ingredients__title-text crossed-title__text">Дополнительно</span>
+            <span class="extra-ingredients__title-text crossed-title__text crossed-title__text--form">Дополнительно</span>
           </legend>
 
           <label class="extra-ingredients__item form-label" for="sweetener">
@@ -161,7 +161,9 @@
         </fieldset>
 
         <div class="form__button-wrapper">
-          <button class="form__button button button--primary" type="submit">отправить заявку</button>
+          <button class="form__button button button--primary-color button--general-size" type="submit">
+            <span class="button__description">отправить заявку</span>
+          </button>
           <p class="form__required-fields-note">* — Обязательные поля</p>
         </div>
 

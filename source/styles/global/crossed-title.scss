@@ -34,6 +34,10 @@
     padding-left: 40px;
     padding-right: 40px;
     left: 0;
+
+    &--form {
+      left: -40px;
+    }
   }
 
   @media (min-width: variables.$desktop) {

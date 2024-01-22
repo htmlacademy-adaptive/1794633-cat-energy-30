@@ -26,4 +26,13 @@
     border: none;
     padding: 0;
   }
+
+  &:hover .main-footer__logo-name path,
+  &:focus .main-footer__logo-name path {
+    fill: variables.$footer-logo-hover-color;
+  }
+
+  &:active .main-footer__logo-name path {
+    fill: variables.$footer-logo-active-color;
+  }
 }

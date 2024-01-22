@@ -75,7 +75,9 @@
   @include fonts.set-font(oswald, variables.$general-title-color, 16px, 100%, uppercase);
   text-decoration: none;
   display: flex;
+  align-items: center;
   gap: 15px;
+
 
   @media (min-width: variables.$tablet) {
     font-size: 20px;
@@ -83,10 +85,24 @@
 
   &::after {
     content: "";
-    background-image: url("../../images/icons/stack.svg#link-arrow-short");
     background-repeat: no-repeat;
+    background-image: url("../../images/icons/stack.svg#link-arrow-short");
     width: 24px;
     height: 12px;
+  }
+
+  &:hover {
+    &::after {
+      background-image: url("../../images/icons/stack.svg#link-arrow-long");
+      width: 32px;
+      height: 12px;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 

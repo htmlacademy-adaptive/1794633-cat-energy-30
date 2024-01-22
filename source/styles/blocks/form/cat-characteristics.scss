@@ -4,8 +4,10 @@
 .cat-characteristics {
   @include common.reset-fieldset;
   gap: 14px;
-  //padding-bottom: 24px;
-  //border-bottom: 1px solid variables.$footer-underline-color;
+
+  @media (min-width: variables.$desktop) {
+    gap: 20px;
+  }
 }
 
 .cat-characteristics__item {

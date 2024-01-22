@@ -24,6 +24,16 @@
   }
 }
 
+.main-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .main-header__menu-toggle {
   background-color: variables.$form-input-icon-color;
   border: none;
