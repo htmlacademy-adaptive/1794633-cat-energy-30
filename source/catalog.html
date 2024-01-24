@@ -468,11 +468,19 @@
           </p>
         </div>
 
-        <picture>
-          <source type="image/png" width="1440" height="400" media="(min-width: 1440px)" srcset="images/footer/map-stub-desktop@1x.png 1x, images/footer/map-stub-desktop@2x.png 2x">
-          <source type="image/png" width="768" height="400" media="(min-width: 768px)" srcset="images/footer/map-stub-tablet@1x.png 1x, images/footer/map-stub-tablet@2x.png 2x">
-          <img class="location__map" width="320" height="362" alt="Расположение на карте." src="images/footer/map-stub@1x.png" srcset="images/footer/map-stub@2x.png 2x" >
-        </picture>
+        <iframe class="location__map" title="Карта."
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26886.827559107398!2d30.326046479230065!3d59.942505644494815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca3de3a1%3A0xba80b1be36549aba!2sHtml%20Academy!5e0!3m2!1sru!2sru!4v1706097194983!5m2!1sru!2sru"
+          width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <noscript>
+          <picture>
+            <source type="image/png" width="1440" height="400" media="(min-width: 1440px)"
+              srcset="images/footer/map-stub-desktop@1x.png 1x, images/footer/map-stub-desktop@2x.png 2x">
+            <source type="image/png" width="768" height="400" media="(min-width: 768px)"
+              srcset="images/footer/map-stub-tablet@1x.png 1x, images/footer/map-stub-tablet@2x.png 2x">
+            <img class="location__map" width="320" height="362" alt="Расположение на карте."
+              src="images/footer/map-stub@1x.png" srcset="images/footer/map-stub@2x.png 2x">
+          </picture>
+        </noscript>
       </section>
 
       <section class="main-footer__links footer-links cup-container">
