@@ -20,10 +20,21 @@
 }
 
 .example__slider {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet) {
+    width: 560px;
+    height: 512px;
+  }
+
   @media (min-width: variables.$desktop) {
     position: absolute;
-    top: 40px;
-    right: variables.$cup-container-padding-desktop;
+    right: 109px;
+    top: 56px;
   }
 }
 

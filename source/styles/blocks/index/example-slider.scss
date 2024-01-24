@@ -1,4 +1,78 @@
-.example-slider {
-  display: flex;
-  justify-content: center;
+@use "../../global/variables";
+
+.example-slider__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 100%;
+  background-color: variables.$slider-border-color;
+  z-index: 3;
+  border-radius: 2px;
+  padding-left: 0;
+  padding-right: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: variables.$slider-arrow-background-color;
+    border: 2px solid variables.$slider-border-color;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mask-image: url("../../images/icons/stack.svg#slider-arrows");
+    background-color: variables.$slider-border-color;
+    width: 24px;
+    height: 18px;
+  }
+}
+
+.example-slider__button:hover {
+  background-color: variables.$slider-hover-color;
+
+  &::before {
+    border-color: variables.$slider-hover-color;
+  }
+
+  &::after {
+    background-color: variables.$slider-hover-color;
+  }
+}
+
+.example-slider__button:active {
+  background-color: variables.$slider-active-color;
+
+  &::before {
+    border-color: variables.$slider-active-color;
+  }
+
+  &::after {
+    background-color: variables.$slider-active-color;
+  }
+}
+
+.example-slider__image {
+  object-fit: cover;
+
+  &--fat {
+    object-position: left;
+  }
+
+  &--thin {
+    object-position: right;
+  }
 }

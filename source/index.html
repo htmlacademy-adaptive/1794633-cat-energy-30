@@ -145,15 +145,28 @@
           </div>
 
         </div>
+
         <div class="example__slider example-slider">
           <picture>
-            <source type="image/png" width="560" height="512" media="(min-width: 768px)"
-              srcset="images/index/example/cat-slider-stub-tablet@1x.png 1x, images/index/example/cat-slider-stub-tablet@2x.png 2x">
-            <img class="example-slider__image example-slider__image--before" width="280" height="256"
-              alt="Сравнение До диеты и После." src="images/index/example/cat-slider-stub@1x.png"
-              srcset="images/index/example/cat-slider-stub@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="images/index/example/fat-cat-slider-tablet@1x.webp 1x, images/index/example/fat-cat-slider-tablet@2x.webp 2x" type="image/webp"
+              width="560" height="512">
+            <img class="example-slider__image example-slider__image--fat" loading="lazy"
+              src="images/index/example/fat-cat-slider@1x.webp" srcset="images/index/example/fat-cat-slider@2x.webp 2x" width="280"
+              height="256" alt="результат 'ДО'.">
+          </picture>
+          <button class="example-slider__button button" type="button" aria-label="кнопка слайдера">
+          </button>
+          <picture>
+            <source media="(min-width: 768px)"
+              srcset="images/index/example/thin-cat-slider-tablet@1x.webp 1x, images/index/example/thin-cat-slider-tablet@2x.webp 2x" type="image/webp"
+              width="560" height="512">
+            <img class="example-slider__image example-slider__image--thin" loading="lazy"
+              src="images/index/example/thin-cat-slider@1x.webp" srcset="images/index/example/thin-cat-slider@2x.webp 2x" width="280"
+              height="256" alt="результат 'ПОСЛЕ'.">
           </picture>
         </div>
+
       </section>
 
     </main>
