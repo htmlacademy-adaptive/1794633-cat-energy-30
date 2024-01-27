@@ -1,5 +1,6 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .business-card {
   display: flex;
@@ -8,6 +9,11 @@
 
   padding-top: 26px;
   padding-bottom: 26px;
+
+  @media (min-width: variables.$tablet) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   @media (min-width: variables.$desktop) {
     padding-right: initial;
@@ -31,6 +37,7 @@
 
 .business-card__title {
   @include fonts.set-font(oswald, variables.$triple-dark-grey-font-color, 16px, 125%, uppercase);
+  @include common.reset-p;
   width: 140px;
 
   @media (min-width: variables.$tablet) {
@@ -47,6 +54,7 @@
 
 .business-card__street {
   @include fonts.set-font(lato, variables.$general-font-color, 14px, 142.86%);
+  @include common.reset-p;
   text-align: left;
   width: 140px;
 

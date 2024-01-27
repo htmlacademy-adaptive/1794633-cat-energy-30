@@ -1,16 +1,21 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .results {
+  @include common.reset-dl;
+  margin-top: 20px;
+  margin-bottom: 34px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
-  grid-gap: 32px;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 32px;
   justify-content: space-between;
-  height: 56px;
+  height: 57px;
 
   @media (min-width: variables.$tablet) {
-    width: 45vw;
+    width: 367px;
     height: 72px;
+    grid-column-gap: 44px;
   }
 
   @media (min-width: variables.$desktop) {
@@ -19,7 +24,7 @@
 }
 
 .results__item {
-  flex-grow: 1;
+  //flex-grow: 1;
   border: 1px solid variables.$example-border-color;
   border-radius: 2px;
   position: relative;
@@ -39,20 +44,23 @@
 
 .results__description {
   @include fonts.set-font(lato, variables.$general-font-color, 12px, 100%);
+  @include common.reset-dd;
   position: absolute;
   bottom: 0;
   margin: 0;
-  transform: translateY(50%);
+  transform: translateY(58%);
   display: inline-block;
   text-align: center;
   padding-left: 11px;
   padding-right: 11px;
   background-color: variables.$example-background-color;
-  width: 50%;
+  width: 66%;
 
   @media (min-width: variables.$tablet) {
     font-size: 14px;
     background-color: variables.$primary-background-color;
+    padding-left: 8px;
+    padding-right: 10px;
   }
 
   @media (min-width: variables.$desktop) {

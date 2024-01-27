@@ -27,3 +27,13 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@mixin reset-dl() {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+@mixin reset-dd() {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}

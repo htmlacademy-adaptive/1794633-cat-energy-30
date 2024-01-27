@@ -6,3 +6,9 @@ img {
   object-fit: contain;
   display: block;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

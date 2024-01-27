@@ -1,5 +1,9 @@
 @use "../../global/variables";
 
+.example-slider {
+  //display: flex;
+}
+
 .example-slider__button {
   position: absolute;
   top: 50%;
