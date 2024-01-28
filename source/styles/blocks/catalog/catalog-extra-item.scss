@@ -1,8 +1,9 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .catalog-extra-item {
-  padding-bottom: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid variables.$example-border-color;
 
   &:last-child {
@@ -10,19 +11,29 @@
   }
 
   @media (min-width: variables.$tablet) {
+    padding-top: 26px;
     padding-bottom: 28px;
+    border-left: 1px solid variables.$example-border-color;
+    border-right: 1px solid variables.$example-border-color;
   }
 
   @media (min-width: variables.$desktop) {
-    padding-top: 15px;
-    padding-bottom: 17px;
+    //padding-top: 15px;
+    //padding-bottom: 17px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left: none;
+    border-right: none;
   }
 }
 
 .catalog-extra-item__inner {
+  padding-top: 13px;
+
   @media (min-width: variables.$tablet) and (max-width: variables.$desktop - 1) {
     padding-left: 38px;
     padding-right: 38px;
+    padding-top: 0;
   }
 
   @media (min-width: variables.$desktop) {
@@ -30,6 +41,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 17px;
   }
 }
 
@@ -37,7 +50,7 @@
   @media (min-width: variables.$tablet) {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     flex-grow: 1;
   }
 
@@ -48,6 +61,11 @@
 
 .catalog-extra-item__title {
   @include fonts.set-font(oswald, variables.$double-dark-grey-font-color, 16px, 100%, uppercase);
+  @include common.reset-title;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 20px;
+  }
 
   @media (min-width: variables.$desktop) {
     flex-grow: 1;
@@ -56,15 +74,24 @@
 
 .catalog-extra-item__description {
   @include fonts.set-font(lato, variables.$general-font-color, 14px, 100%);
+  @include common.reset-p;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 13px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 16px;
+    line-height: 125%;
+    margin-top: 0;
+  }
 }
 
 .catalog-extra-item__property {
   @media (min-width: variables.$desktop) {
     text-align: left;
-    min-width: 220px;
+    min-width: 243px;
   }
 }
 
@@ -73,15 +100,24 @@
   @media (min-width: variables.$tablet) {
     min-width: 93px;
     text-align: right;
+    padding-right: 3px;
   }
 
   @media (min-width: variables.$desktop) {
     min-width: 62px;
+    text-align: left;
   }
 }
 
 .catalog-extra-item__button {
+  margin-top: 15px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 22px;
+  }
+
   @media (min-width: variables.$desktop) {
     width: 244px;
+    margin-top: 0;
   }
 }

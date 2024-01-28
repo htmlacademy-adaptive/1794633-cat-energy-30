@@ -3,29 +3,36 @@
 @use "../../global/common";
 
 .catalog-extra {
-  margin-top: 25px;
+  margin-top: 18px;
 
   @media (min-width: variables.$tablet) {
-    margin-top: 70px;
+    margin-top: 56px;
   }
 
   @media (min-width: variables.$desktop) {
-    margin-top: 76px;
+    margin-top: 65px;
+    margin-bottom: 84px;
   }
 }
 
 .catalog-extra__inner {
+  margin-top: 19px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 56px;
+  }
+
   @media (min-width: variables.$desktop) {
     display: flex;
     justify-content: space-between;
     gap: 81px;
-    margin-top: 80px;
-    margin-bottom: 87px;
+    margin-top: 54px;
   }
 }
 
 .catalog-extra__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 100%);
+  @include common.reset-title;
 
   @media (min-width: variables.$tablet) {
     font-size: 36px;
@@ -46,7 +53,7 @@
 
   @media (min-width: variables.$tablet) {
     margin-top: 70px;
-    margin-bottom: 75px;
+    margin-bottom: 74px;
   }
 
   @media (min-width: variables.$desktop) {
