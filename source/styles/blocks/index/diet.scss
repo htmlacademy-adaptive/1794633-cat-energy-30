@@ -13,9 +13,11 @@
     display: flex;
     flex-direction: column;
   }
+
+  @media (min-width: variables.$tablet) {
+    padding: 50px 50px 59px 52px;
+  }
 }
-
-
 
 .diet__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 154.17%, uppercase);
@@ -29,11 +31,11 @@
     font-size: 36px;
     line-height: 100%;
     margin-top: 27px;
-    margin-left: 0;
   }
 
   @media (min-width: variables.$desktop) {
     gap: 62px;
+    margin-left: 161px;
   }
 
   &--slim::before {
@@ -55,9 +57,10 @@
     }
 
     @media (min-width: variables.$desktop) {
-      position: initial;
       width: 100px;
       height: 106px;
+      left: -161px;
+      top: -38px;
     }
   }
 
@@ -80,9 +83,10 @@
     }
 
     @media (min-width: variables.$desktop) {
-      position: initial;
       width: 134px;
       height: 100px;
+      left: -180px;
+      top: -31px;
     }
   }
 }
@@ -101,6 +105,7 @@
 
   @media (min-width: variables.$desktop) {
     width: initial;
+    margin-top: 73px;
   }
 }
 

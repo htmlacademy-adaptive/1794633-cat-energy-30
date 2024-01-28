@@ -16,11 +16,11 @@
   }
 
   @media (min-width: variables.$desktop) {
-    background-image: linear-gradient(variables.$primary-background-color 191px, variables.$example-background-color 191px);
-
-    @media (min-width: variables.$desktop) {
-      position: relative;
-    }
+    //background-image: linear-gradient(variables.$primary-background-color 191px, variables.$example-background-color 191px);
+    background-image: linear-gradient(variables.$primary-background-color 159px, variables.$example-background-color 159px);
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 20px;
   }
 }
 
@@ -36,7 +36,6 @@
 }
 
 .example__results-wrapper {
-
   @media (min-width: variables.$tablet) {
     display: flex;
     align-items: center;
@@ -47,13 +46,13 @@
 
   @media (min-width: variables.$desktop) {
     flex-direction: column;
-    width: 25vw;
+    width: 25.5vw;
     align-items: flex-start;
+    margin-top: 48px;
   }
 }
 
 .example__results {
-
   @media (min-width: variables.$desktop) {
     margin-bottom: 60px;
   }
@@ -74,8 +73,9 @@
   }
 
   @media (min-width: variables.$desktop) {
-    width: 29vw;
-    margin-bottom: 69px;
+    width: 30vw;
+    margin-top: 145px;
+    margin-bottom: 0;
   }
 }
 
@@ -99,7 +99,8 @@
 
   @media (min-width: variables.$desktop) {
     flex-direction: row;
-    gap: 63px;
+    gap: 67px;
+    margin-top: 28px;
   }
 }
 
@@ -120,6 +121,7 @@
   @media (min-width: variables.$desktop) {
     position: absolute;
     right: 109px;
-    top: 56px;
+    top: 22px;
+    margin-top: 0;
   }
 }

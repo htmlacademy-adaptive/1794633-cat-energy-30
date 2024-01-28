@@ -26,8 +26,9 @@ $smoothing-background-color: rgb(70, 70, 70);
   }
 
   @media (min-width: variables.$desktop) {
-    padding-bottom: 250px;
-    width: 40%;
+    padding-bottom: 20px;
+    min-height: 470px;
+    width: 50%;
   }
 }
 
@@ -35,6 +36,11 @@ $smoothing-background-color: rgb(70, 70, 70);
   @media (min-width: variables.$tablet) {
     margin-top: 40px;
     padding-left: variables.$cup-container-padding-tablet + 90px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-left: 190px;
+    margin-top: 81px;
   }
 }
 
@@ -49,6 +55,10 @@ $smoothing-background-color: rgb(70, 70, 70);
     text-align: initial;
     width: 70vw;
   }
+
+  @media (min-width: variables.$desktop) {
+    width: 39vw;
+  }
 }
 
 .hero__slogan {
@@ -62,6 +72,10 @@ $smoothing-background-color: rgb(70, 70, 70);
     text-align: initial;
     margin-top: 40px;
     margin-bottom: 50px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 52px;
   }
 }
 
@@ -80,7 +94,14 @@ $smoothing-background-color: rgb(70, 70, 70);
   }
 
   @media (min-width: variables.$desktop) {
-    transform: translate(75%, -50%);
+    //transform: translate(75%, -50%);
+    left: initial;
+    bottom: initial;
+    top: -80px;
+    right: -389px;
+    object-fit: initial;
+    max-height: initial;
+    max-width: initial;
   }
 }
 

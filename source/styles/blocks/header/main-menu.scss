@@ -3,19 +3,20 @@
 @use "../../global/common";
 
 .main-menu {
-
   @media (min-width: variables.$tablet) {
     display: flex;
     gap: 33px;
   }
 
   @media (min-width: variables.$desktop) {
+    gap: 34px;
+
     &--index .main-menu__link {
       color: variables.$general-light-font-color;
+    }
 
-      &--active::after {
-        background-color: variables.$general-light-font-color;
-      }
+    &--index .main-menu__link--active::after {
+      background-color: variables.$general-light-font-color;
     }
   }
 }
@@ -68,5 +69,9 @@
     font-size: 20px;
     line-height: 100%;
     padding: 0;
+
+    &--active::after {
+      bottom: -12px;
+    }
   }
 }

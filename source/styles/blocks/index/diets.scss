@@ -1,6 +1,12 @@
 @use "../../global/common";
 @use "../../global/variables";
 
+.diets {
+  @media (min-width: variables.$desktop) {
+    margin-top: 82px;
+  }
+}
+
 .diets__list {
   @include common.reset-list;
 
@@ -13,7 +19,8 @@
   }
 
   @media (min-width: variables.$desktop) {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }
