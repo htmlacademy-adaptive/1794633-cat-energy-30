@@ -5,7 +5,8 @@
 .main-menu {
   @media (min-width: variables.$tablet) {
     display: flex;
-    gap: 33px;
+    //gap: 33px;
+    gap: 34px;
   }
 
   @media (min-width: variables.$desktop) {

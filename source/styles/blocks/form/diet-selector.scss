@@ -4,6 +4,8 @@
 .diet-selector {
   @include common.reset-fieldset;
   gap: 13px;
+  padding-top: 10px;
+  padding-bottom: 4px;
 
   @media (max-width: variables.$tablet - 1) {
     &::before {
@@ -13,6 +15,7 @@
       background-color: variables.$footer-underline-color;
       position: relative;
       left: -20px;
+      top: -10px;
     }
 
     &::after {
@@ -22,6 +25,7 @@
       background-color: variables.$footer-underline-color;
       position: relative;
       left: -20px;
+      bottom: -5px;
     }
   }
 
@@ -31,7 +35,7 @@
   }
 
   @media (min-width: variables.$desktop) {
-    margin-left: 80px;
+    //margin-left: 80px;
     padding-left: 28px;
     padding-top: 25px;
     padding-bottom: 25px;

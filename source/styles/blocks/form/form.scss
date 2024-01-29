@@ -14,58 +14,77 @@
 .form__cat-characteristics-and-diet-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 26px;
+  gap: 23px;
+  margin-top: 39px;
+  //margin-bottom: 26px;
 
   @media (min-width: variables.$tablet) {
     gap: 72px;
-    margin-bottom: 65px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: variables.$desktop) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
-    margin-bottom: 70px;
+    gap: 82px;
+    margin-bottom: 56px;
   }
 }
 
 .form__inner-title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 108.33%, initial);
-}
 
-.form__required-fields-note {
-  @include fonts.set-font(lato, variables.$general-title-color, 14px, 114.29%, initial);
-  @include common.reset-p;
-  text-align: center;
 
   @media (min-width: variables.$tablet) {
-    margin-top: auto;
-    margin-bottom: auto;
+    font-size: 36px;
+    line-height: 100%;
   }
 }
 
 .form__contacts {
-  margin-bottom: 24px;
+  margin-top: 17px;
+  //margin-bottom: 10px;
 }
 
 .form__comments {
-  margin-bottom: 23px;
+  margin-top: 14px;
+  //margin-bottom: 14px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 53px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 57px;
+  }
 }
 
 .form__extra {
-  margin-bottom: 34px;
+  margin-top: 14px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 52px;
+  }
 
   @media (min-width: variables.$desktop) {
+    margin-top: 58px;
     margin-bottom: 60px;
   }
 }
 
 .form__button-wrapper {
+  margin-top: 32px;
+
   @media (min-width: variables.$tablet) {
     display: grid;
+    grid-template-columns: 284px auto;
+    gap: 57px;
+    margin-top: 51px;
+  }
+
+  @media (min-width: variables.$desktop) {
     grid-template-columns: 1fr 1fr;
-    gap: 0;
+    gap: 81px;
   }
 }
 
@@ -73,6 +92,21 @@
   width: 100%;
 
   @media (max-width: variables.$tablet - 1) {
-    margin-bottom: 21px;
+    //margin-bottom: 21px;
+  }
+}
+
+.form__required-fields-note {
+  @include fonts.set-font(lato, variables.$general-title-color, 14px, 114.29%, initial);
+  @include common.reset-p;
+  text-align: center;
+  margin-top: 20px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 16px;
+    line-height: 100%;
+    text-align: left;
   }
 }

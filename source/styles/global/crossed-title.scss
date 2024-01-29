@@ -25,9 +25,11 @@
 .crossed-title__text {
   position: absolute;
   background-color: #ffffff;
-  transform: translateY(-70%);
   padding-left: 20px;
   padding-right: 20px;
+  //transform: translateY(-70%);
+  //top: 9px;
+  top: 18%;
   left: -20px;
 
   @media (min-width: variables.$tablet) {

@@ -7,19 +7,29 @@
 }
 
 .comments-title {
-  margin-bottom: 38px;
+  @include common.reset-legend;
+  margin-bottom: 21px;
+
+  @media (min-width: variables.$tablet) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 55px;
+  }
 }
 
 .comments__input {
   @include fonts.set-font(oswald, variables.$general-font-color, 16px, 112.5%, uppercase);
   padding: 14px 15px 13px;
   border: 1px solid variables.$form-input-border-color;
+  height: 150px;
 
   &::placeholder {
     text-align: center;
     color: inherit;
-    font-size: 20px;
-    line-height: 100%;
+    //font-size: 20px;
+    //line-height: 100%;
   }
 
   &:hover {
@@ -37,8 +47,17 @@
   }
 
   @media (min-width: variables.$tablet) {
+    font-size: 20px;
+    line-height: 150%;
+    padding: 11px 20px 13px;
+    height: 175px;
+
     &::placeholder {
       text-align: left;
     }
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-top: 9px;
   }
 }

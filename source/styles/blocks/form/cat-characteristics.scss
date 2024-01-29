@@ -3,7 +3,11 @@
 
 .cat-characteristics {
   @include common.reset-fieldset;
-  gap: 14px;
+  gap: 13px;
+
+  @media (min-width: variables.$tablet) {
+    gap: 20px;
+  }
 
   @media (min-width: variables.$desktop) {
     gap: 20px;
@@ -11,7 +15,7 @@
 }
 
 .cat-characteristics__item {
-  gap: 13px;
+  gap: 14px;
 }
 
 .cat-characteristics__input {

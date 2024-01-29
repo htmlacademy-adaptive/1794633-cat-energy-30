@@ -5,12 +5,28 @@
   @include common.reset-fieldset;
   gap: 13px;
 
-  @media (min-width: variables.$desktop) {
+  @media (min-width: variables.$tablet) {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 32px;
+  }
+
+  @media (min-width: variables.$desktop) {
     grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
   }
 }
 
 .extra-ingredients__title {
-  margin-bottom: 34px;
+  @include common.reset-legend;
+  margin-bottom: 18px;
+
+  @media (min-width: variables.$tablet) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 33px;
+  }
 }
