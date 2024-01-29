@@ -18,6 +18,13 @@ $smoothing-background-color: rgb(70, 70, 70);
     background-size: auto 302px;
     padding-top: 27px;
     padding-bottom: 20px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+        url("../../images/index/hero/hero-cat@2x.webp"),
+        linear-gradient($smoothing-background-color, $smoothing-background-color);
+    }
   }
 
   @media (min-width: variables.$tablet) {
