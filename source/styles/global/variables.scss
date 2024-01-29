@@ -1,8 +1,15 @@
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
+$cup-container-padding-mobile: 20px;
+$cup-container-padding-tablet: 30px;
+$cup-container-padding-desktop: 110px;
+
 $oswald-font-string: "Oswald", "Arial", "Helvetica", sans-serif;
 $lato-font-string: "Lato", "Arial", "Helvetica", sans-serif;
 
 $general-green-background-color: #68b738;
-$form-input-icon-color: #000000;
 $primary-background-color: #ffffff;
 $general-title-color: #000000;
 $triple-dark-grey-font-color: #111111;
@@ -11,8 +18,43 @@ $dark-grey-font-color: #444444;
 $general-font-color: #444444;
 $general-light-font-color: #ffffff;
 $button-primary-color: $general-green-background-color;
-
+$button-primary-hover-color: #5eaa2f;
 $button-secondary-color: #f2f2f2;
-$grey-background-color: #f2f2f2;
+$button-secondary-hover-color: #ebebeb;
 
+
+$link-active-underline-dark-color: $general-green-background-color;
+$link-active-underline-light-color: $primary-background-color;
+$menu-line-color: #e6e6e6;
+
+$main-container-start-splitter-color: #d9d9d9;
+
+$index-section-splitter: #e6e6e6;
 $hero-background-color: rgba(104, 183, 56, 0.85);
+$diet-item-splitter-color: #d9d9d9;
+$example-border-color: #cdcdcd;
+$example-background-color: #eaeaea;
+
+$slider-border-color: #666666;
+$slider-arrow-background-color: #ffffff;
+$slider-hover-color: #68b738;
+$slider-active-color: rgba(94, 170, 47, 0.6);
+
+$catalog-item-table-underline-color: #cdcdcd;
+$catalog-card-divider-color: #ebebeb;
+
+$form-input-icon-color: #000000;
+$form-input-border-color: #e7e7e7;
+$form-input-hover-color: #cdcdcd;
+$form-input-focus-color: #444444;
+$form-invalid-input-icon-color: #ff8282;
+$form-radiobutton-hover-color: #bababa;
+$form-radiobutton-outer-color: #cdcdcd;
+$form-radiobutton-inner-color: #68b738;
+
+$grey-background-color: #f2f2f2;
+$footer-underline-color: #d9d9d9;
+$footer-social-link-hover-color: #68b738;
+$footer-html-link-color: #666666;
+$footer-logo-hover-color: #3e3e3e;
+$footer-logo-active-color: #6b6b6b;

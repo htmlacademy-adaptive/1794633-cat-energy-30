@@ -5,6 +5,9 @@
 @use "./global/visually-hidden";
 @use "./global/common";
 @use "./global/button";
+@use "./global/cup-container";
+@use "./global/crossed-title";
+@use "./global/form-label";
 
 /* BLOCKS */
 @use "./blocks/page-body";
@@ -23,7 +26,6 @@
 @use "./blocks/catalog/catalog-extra";
 @use "./blocks/catalog/catalog-extra-item";
 @use "./blocks/catalog/catalog-gift";
-@use "./blocks/catalog/catalog-more-card";
 @use "./blocks/form/cat-characteristics";
 @use "./blocks/form/comments";
 @use "./blocks/form/contacts";
@@ -35,5 +37,4 @@
 @use "./blocks/footer/copyright";
 @use "./blocks/footer/footer-links";
 @use "./blocks/footer/location";
-@use "./blocks/footer/main-footer";
 @use "./blocks/footer/socials";

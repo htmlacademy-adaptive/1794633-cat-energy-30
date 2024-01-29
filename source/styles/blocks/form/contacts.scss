@@ -4,10 +4,38 @@
 .contacts {
   @include common.reset-fieldset;
   gap: 14px;
+
+  @media (min-width: variables.$tablet) {
+    gap: 21px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.contacts__title {
+  @include common.reset-title;
+  @include common.reset-legend;
+
+  margin-bottom: 43px;
+
+  @media (min-width: variables.$tablet) {
+    margin-bottom: 53px;
+  }
+}
+
+.contacts__title-text {
+  width: 80%;
+
+  @media (min-width: variables.$tablet) {
+    width: 95%;
+  }
 }
 
 .contacts__item {
-  display: flex;
   gap: 13px;
   position: relative;
 
@@ -18,9 +46,13 @@
     right: 12px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: variables.$form-input-icon-color;
+    background-color: variables.$double-dark-grey-font-color;
     width: 20px;
     height: 20px;
+
+    @media (min-width: variables.$desktop) {
+      right: 16px;
+    }
   }
 
   &--email {
@@ -34,8 +66,27 @@
       mask-image: url("../../images/icons/stack.svg#input-phone");
     }
   }
+
+  &--email:focus-within,
+  &--phone:focus-within {
+    &::after {
+      background-color: variables.$button-primary-color;
+    }
+  }
+
+  @media (min-width: variables.$tablet) {
+    gap: 15px;
+  }
+}
+
+.form-label:has(.form-label__input:invalid) {
+  &::after {
+    background-color: variables.$form-invalid-input-icon-color;
+  }
 }
 
 .contacts__input {
   flex-grow: 1;
+
+  padding-right: 40px;
 }

@@ -4,4 +4,42 @@
 .diet-selector {
   @include common.reset-fieldset;
   gap: 13px;
+  padding-top: 10px;
+  padding-bottom: 4px;
+
+  @media (max-width: variables.$tablet - 1) {
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: variables.$footer-underline-color;
+      position: relative;
+      left: -20px;
+      top: -10px;
+    }
+
+    &::after {
+      content: "";
+      width: 100vw;
+      height: 1px;
+      background-color: variables.$footer-underline-color;
+      position: relative;
+      left: -20px;
+      bottom: -5px;
+    }
+  }
+
+  @media (min-width: variables.$tablet) {
+    border: 1px solid variables.$footer-underline-color;
+    padding: 23px 27px 27px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    //margin-left: 80px;
+    padding-left: 28px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    //height: 100%;
+    justify-content: space-between;
+  }
 }

@@ -6,14 +6,35 @@
   @include common.reset-link;
 
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet) {
+    border: none;
+    padding: 0;
+    gap: 23px;
+  }
 
   &::after {
     content: "";
-    background-image: url("../../images/icons/stack.svg#academy-footer-logo");
+    mask-image: url("../../images/icons/stack.svg#academy-footer-logo");
+    background-color: variables.$footer-html-link-color;
     background-repeat: no-repeat;
     width: 27px;
     height: 34px;
   }
+}
+
+.copyright:hover {
+  &::after {
+    background-color: variables.$footer-social-link-hover-color;
+  }
+}
+
+.copyright:active {
+  opacity: 0.3;
 }
 
 .copyright__title {

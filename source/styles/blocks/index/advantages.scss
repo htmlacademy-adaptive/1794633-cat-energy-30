@@ -2,21 +2,106 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: variables.$tablet) {
+    padding-top: 45px;
+    //padding-bottom: 55px;
+    padding-bottom: 6px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-top: 73px;
+  }
+}
+
+.advantages__title {
+  @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+  @include common.reset-title;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    line-height: 100%;
+  }
+}
+
 .advantages__list {
   @include common.reset-list;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+  counter-reset: section 0;
+  margin-top: 40px;
 
-.advantages__title {
-  @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+
+  @media (min-width: variables.$tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 32vw);
+    grid-auto-rows: 280px;
+    grid-column-gap: 138px;
+    grid-row-gap: 37px;
+    margin-top: 72px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-rows: unset;
+    grid-column-gap: initial;
+    grid-row-gap: initial;
+  }
 }
 
 .advantages__item {
   display: flex;
   gap: 20px;
   align-items: center;
+
+  @media (min-width: variables.$tablet) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    gap: 31px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  @media (min-width: variables.$desktop) {
+    min-height: 280px;
+    width: 18.81%;
+
+    &:nth-child(2n + 2) {
+      margin-left: 7.8%;
+      width: 20.12%;
+    }
+
+    &:nth-child(3n + 3) {
+      margin-left: 6.5%;
+      width: 20.28%;
+    }
+
+    &:nth-child(4n + 4) {
+      margin-left: 6.2%;
+      width: 20.2%;
+    }
+  }
+
+  &::after {
+    @media (min-width: variables.$tablet) {
+      @include fonts.set-font(oswald, variables.$grey-background-color, 280px, 100%);
+      counter-increment: section 1;
+      content: counter(section);
+      position: absolute;
+      //top: 9px;
+      top: -39px;
+      right: 0;
+      z-index: -1;
+    }
+  }
 
   &::before {
     content: "";
@@ -25,33 +110,63 @@
     width: 60px;
     height: 60px;
     background-color: variables.$general-green-background-color;
-  }
+    flex-shrink: 0;
 
-  &--leaf {
-    &::before {
-      background-image: url("../../images/icons/stack.svg#advantages-leaf");
-      background-size: 30px 32px;
+    @media (min-width: variables.$tablet) {
+      width: 80px;
+      height: 80px;
     }
   }
 
-  &--powder {
-    &::before {
-      background-image: url("../../images/icons/stack.svg#advantages-powder");
-      background-size: 27px 29px;
+  &--leaf::before {
+    background-image: url("../../images/icons/stack.svg#advantages-leaf");
+    background-size: 25px 28px;
+  }
+
+  &--leaf::after {
+    right: 21px;
+
+    @media (min-width: variables.$desktop) {
+      right: 7px;
     }
   }
 
-  &--cutlery {
-    &::before {
-      background-image: url("../../images/icons/stack.svg#advantages-cutlery");
-      background-size: 26px 30px;
+  &--powder::before {
+    background-image: url("../../images/icons/stack.svg#advantages-powder");
+    background-size: 26px 29px;
+  }
+
+  &--powder::after {
+    right: 2px;
+
+    @media (min-width: variables.$desktop) {
+      right: 3px;
     }
   }
 
-  &--timer {
-    &::before {
-      background-image: url("../../images/icons/stack.svg#advantages-timer");
-      background-size: 26px 30px;
+  &--cutlery::before {
+    background-image: url("../../images/icons/stack.svg#advantages-cutlery");
+    background-size: 26px 30px;
+  }
+
+  &--cutlery::after {
+    right: -1px;
+
+    @media (min-width: variables.$desktop) {
+      right: -1px;
+    }
+  }
+
+  &--timer::before {
+    background-image: url("../../images/icons/stack.svg#advantages-timer");
+    background-size: 26px 30px;
+  }
+
+  &--timer::after {
+    right: -3px;
+
+    @media (min-width: variables.$desktop) {
+      right: -3px;
     }
   }
 }

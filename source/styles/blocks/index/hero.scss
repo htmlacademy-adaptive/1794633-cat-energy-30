@@ -1,19 +1,127 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
+
+$smoothing-background-color: rgb(70, 70, 70);
 
 .hero {
-  /*temporary coloring for font contrast*/
-  background-color: variables.$hero-background-color;
+  position: relative;
+
+  @media (max-width: variables.$tablet - 1) {
+    background-image:
+      linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+      url("../../images/index/hero/hero-cat@1x.webp"),
+      linear-gradient($smoothing-background-color, $smoothing-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: inherit;
+    //background-size: auto 302px;
+    background-size: auto 60.5%;
+    padding-top: 27px;
+    padding-bottom: 20px;
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+        url("../../images/index/hero/hero-cat@2x.webp"),
+        linear-gradient($smoothing-background-color, $smoothing-background-color);
+    }
+  }
+
+  @media (min-width: variables.$tablet) {
+    padding-bottom: 526px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-bottom: 20px;
+    min-height: 470px;
+    width: 50%;
+  }
+}
+
+$hero-container-left-right-padding-tablet: variables.$cup-container-padding-tablet + 90px;
+
+.hero__container {
+  @media (min-width: variables.$tablet) {
+    margin-top: 40px;
+    padding-left: $hero-container-left-right-padding-tablet;
+    padding-right: $hero-container-left-right-padding-tablet;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-left: 190px;
+    //padding-right: 30px;
+    margin-top: 81px;
+  }
 }
 
 .hero__title {
   @include fonts.set-font(oswald, variables.$general-light-font-color, 36px, 100%);
+  @include common.reset-title;
+  text-align: center;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    color: variables.$general-title-color;
+    text-align: initial;
+    width: 70vw;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 39vw;
+  }
 }
 
 .hero__slogan {
   @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 100%, uppercase);
+  text-align: center;
+  margin-top: 25px;
+
+  @media (min-width: variables.$tablet) {
+    @include fonts.set-font(oswald, variables.$general-light-font-color, 20px, 100%, uppercase);
+    color: variables.$general-title-color;
+    text-align: initial;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 52px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin-top: 29px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: variables.$tablet) {
+    position: absolute;
+    left: variables.$cup-container-padding-tablet;
+    bottom: 0;
+    margin-top: 0;
+    z-index: -1;
+  }
+
+  @media (min-width: variables.$desktop) {
+    //transform: translate(75%, -50%);
+    left: initial;
+    bottom: initial;
+    top: -80px;
+    right: -389px;
+    object-fit: initial;
+    max-height: initial;
+    max-width: initial;
+  }
 }
 
 .hero__button {
-  @include fonts.set-font(oswald, variables.$general-light-font-color, 14px, 128.57%, uppercase);
+  @media (max-width: variables.$tablet - 1) {
+    margin-top: 3px;
+  }
+
+  @media (min-width: variables.$tablet) {
+    width: 244px;
+  }
 }

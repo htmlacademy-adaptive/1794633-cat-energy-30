@@ -1,14 +1,132 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .example {
-  background-color: variables.$grey-background-color;
+  background-color: variables.$example-background-color;
+  padding-top: 25px;
+  padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet) {
+    background-color: variables.$primary-background-color;
+    background-image: linear-gradient(to bottom, variables.$primary-background-color 618px, variables.$example-background-color 618px);
+    border-top: 1px solid variables.$index-section-splitter;
+    padding-top: 44px;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    //background-image: linear-gradient(variables.$primary-background-color 191px, variables.$example-background-color 191px);
+    background-image: linear-gradient(variables.$primary-background-color 159px, variables.$example-background-color 159px);
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
 }
 
 .example__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 111.11%);
+  @include common.reset-title;
+  //margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    line-height: 100%;
+  }
+}
+
+.example__results-wrapper {
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 34px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: column;
+    width: 25.5vw;
+    align-items: flex-start;
+    margin-top: 48px;
+  }
+}
+
+.example__results {
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-bottom: 146px;
+  }
+}
+
+.example__description {
+  @include common.reset-p;
+  margin-top: 40px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 61px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 30vw;
+    margin-top: 145px;
+    margin-bottom: 0;
+  }
 }
 
 .example__costs {
   @include fonts.set-font(oswald, variables.$general-title-color, 14px, 142.86%, uppercase);
+  @include common.reset-p;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+
+
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 20px;
+    line-height: 100%;
+    gap: 9px;
+    margin-top: 6px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: row;
+    align-items: center;
+    gap: 67px;
+    margin-top: 28px;
+  }
+}
+
+.example__costs-value {
+  flex-shrink: 0;
+}
+
+.example__slider {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+
+  @media (min-width: variables.$tablet) {
+    width: 560px;
+    height: 512px;
+    margin-top: 71px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    position: absolute;
+    right: 109px;
+    top: 22px;
+    margin-top: 0;
+  }
 }

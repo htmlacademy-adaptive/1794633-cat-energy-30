@@ -3,10 +3,76 @@
 @use "../../global/common";
 
 .main-menu {
-  @include common.reset-list;
+  z-index: 2;
+
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 34px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    gap: 34px;
+
+    &--index .main-menu__link {
+      color: variables.$general-light-font-color;
+    }
+
+    &--index .main-menu__link--active::after {
+      background-color: variables.$general-light-font-color;
+    }
+  }
+}
+
+.main-menu__item {
+  @media (max-width: variables.$tablet - 1) {
+    text-align: center;
+    border-top: 1px solid variables.$menu-line-color;
+
+    &:last-child {
+      border-bottom: 1px solid variables.$menu-line-color;
+    }
+  }
 }
 
 .main-menu__link {
   @include fonts.set-font(oswald, variables.$general-title-color, 20px, 100%, uppercase);
   @include common.reset-link;
+
+  display: block;
+  position: relative;
+  padding: 22px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet) {
+    @include fonts.set-font(oswald, variables.$general-title-color, 18px, 133.33%, uppercase);
+    padding: 0;
+
+    &--active::after {
+      content: "";
+      display: block;
+      background-color: variables.$link-active-underline-dark-color;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -9px;
+    }
+  }
+
+  @media (min-width: variables.$desktop) {
+    font-size: 20px;
+    line-height: 100%;
+    padding: 0;
+
+    &--active::after {
+      bottom: -12px;
+    }
+  }
 }

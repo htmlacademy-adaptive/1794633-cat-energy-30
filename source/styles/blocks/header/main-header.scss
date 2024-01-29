@@ -1,9 +1,81 @@
+@use "../../global/variables";
+@use "../../global/common";
+
+.main-header__nav {
+  @media (min-width: variables.$tablet) {
+    display: flex;
+    align-items: center;
+    padding: 25px variables.$cup-container-padding-tablet;
+    //gap: 94px;
+    gap: 95px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding: 56px variables.$cup-container-padding-desktop 28px;
+    justify-content: space-between;
+  }
+}
+
+.main-header__container {
+  @media (max-width: variables.$tablet - 1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 13px variables.$cup-container-padding-mobile 14px variables.$cup-container-padding-mobile;
+    min-width: variables.$mobile;
+  }
+}
+
+.main-header__logo {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .main-header__menu-toggle {
-  background-image: url("../../images/icons/stack.svg#navigation-menu-open");
-  background-repeat: no-repeat;
+  background-color: variables.$form-input-icon-color;
   border: none;
-  width: 18px;
-  height: 18px;
-  padding: 0;
   cursor: pointer;
+  mask-image: url("../../images/icons/stack.svg#navigation-menu-close");
+  width: 20px;
+  height: 20px;
+
+  &--closed {
+    mask-image: url("../../images/icons/stack.svg#navigation-menu-open");
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: variables.$tablet) {
+    display: none;
+  }
+}
+
+.main-header__menu {
+  @include common.reset-list;
+  margin-top: 2px;
+
+  @media (max-width: variables.$tablet - 1) {
+    position: absolute;
+    background-color: variables.$primary-background-color;
+    width: 100%;
+
+    &--closed {
+      display: none;
+    }
+
+    &--no-js {
+      position: static;
+      display: block;
+    }
+  }
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 2px;
+  }
 }

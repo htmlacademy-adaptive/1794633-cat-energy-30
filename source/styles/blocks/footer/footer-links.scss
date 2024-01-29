@@ -1,5 +1,62 @@
 @use "../../global/variables";
+@use "../../global/common";
 
 .footer-links {
   background-color: variables.$grey-background-color;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet) {
+    flex-direction: row;
+    align-items: center;
+    //justify-content: space-between;
+    padding-top: 57px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-top: 69px;
+  }
+}
+
+.footer-links__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 19px;
+  border-bottom: 1px solid variables.$footer-underline-color;
+
+  @media (min-width: variables.$tablet) {
+    border: none;
+    padding: 0;
+  }
+
+  &:hover .main-footer__logo-name path,
+  &:focus .main-footer__logo-name path {
+    fill: variables.$footer-logo-hover-color;
+  }
+
+  &:active .main-footer__logo-name path {
+    fill: variables.$footer-logo-active-color;
+  }
+}
+
+.footer-links__socials {
+  @include common.reset-list;
+
+  @media (min-width: variables.$tablet) {
+    margin-left: 161px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-left: 416px;
+  }
+}
+
+.footer-links__copyright {
+  @media (min-width: variables.$tablet) {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }

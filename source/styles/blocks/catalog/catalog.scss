@@ -4,8 +4,34 @@
 
 .catalog__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 36px, 100%);
+  @include common.reset-title;
+  margin-top: 27px;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 84px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 44px;
+  }
 }
 
 .catalog__list {
   @include common.reset-list;
+  margin-top: 41px;
+
+  @media (min-width: variables.$tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    //gap: 60px;
+    grid-column-gap: 80px;
+    grid-row-gap: 63px;
+  }
 }

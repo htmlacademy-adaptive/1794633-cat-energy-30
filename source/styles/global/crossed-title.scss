@@ -1,0 +1,48 @@
+@use "../global/variables";
+
+.crossed-title {
+  position: relative;
+  white-space: pre-line;
+  width: 100%;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: variables.$general-green-background-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    @media (min-width: variables.$tablet) {
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.crossed-title__text {
+  position: absolute;
+  background-color: #ffffff;
+  padding: 1em 20px;
+  //transform: translateY(-70%);
+  //top: 9px;
+  //top: 18%;
+  top: -0.65em;
+  left: -20px;
+
+  @media (min-width: variables.$tablet) {
+    padding-left: 40px;
+    padding-right: 40px;
+    left: 0;
+
+    &--form {
+      left: -40px;
+    }
+  }
+
+  @media (min-width: variables.$desktop) {
+    left: -40px;
+  }
+}

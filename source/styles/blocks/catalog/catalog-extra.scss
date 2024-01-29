@@ -2,10 +2,62 @@
 @use "../../global/variables";
 @use "../../global/common";
 
+.catalog-extra {
+  margin-top: 18px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 56px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 63px;
+    margin-bottom: 86px;
+  }
+}
+
+.catalog-extra__inner {
+  margin-top: 19px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 56px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    display: flex;
+    justify-content: space-between;
+    gap: 81px;
+    margin-top: 54px;
+  }
+}
+
 .catalog-extra__title {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 100%);
+  @include common.reset-title;
+
+  @media (min-width: variables.$tablet) {
+    font-size: 36px;
+  }
 }
 
 .catalog-extra__list {
   @include common.reset-list;
+
+  @media (min-width: variables.$desktop) {
+    flex-grow: 1;
+  }
+}
+
+.catalog-extra__gift {
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+  @media (min-width: variables.$tablet) {
+    margin-top: 70px;
+    margin-bottom: 74px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

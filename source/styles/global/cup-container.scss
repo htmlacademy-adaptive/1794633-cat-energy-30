@@ -1,0 +1,24 @@
+@use "variables";
+
+.cup-container {
+  min-width: variables.$mobile;
+  padding-left: variables.$cup-container-padding-mobile;
+  padding-right: variables.$cup-container-padding-mobile;
+
+  @media (min-width: variables.$tablet) {
+    padding-left: variables.$cup-container-padding-tablet;
+    padding-right: variables.$cup-container-padding-tablet;
+  }
+
+  @media (min-width: variables.$desktop) {
+    padding-left: variables.$cup-container-padding-desktop;
+    padding-right: variables.$cup-container-padding-desktop;
+  }
+}
+
+.cup-container--form {
+  @media (min-width: variables.$tablet) and (max-width: variables.$desktop - 1) {
+    padding-left: variables.$cup-container-padding-tablet + 40px;
+    padding-right: variables.$cup-container-padding-tablet + 40px;
+  }
+}

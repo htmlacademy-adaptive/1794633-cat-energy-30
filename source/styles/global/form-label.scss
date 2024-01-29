@@ -1,0 +1,142 @@
+@use "../global/variables";
+@use "../global/fonts";
+
+.form-label {
+  display: flex;
+  align-items: center;
+}
+
+.form-label__name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  @media (min-width: variables.$tablet) {
+    gap: 19px;
+  }
+
+  // Радиокнопки
+  &--radio::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid variables.$form-radiobutton-outer-color;
+    flex-shrink: 0;
+
+    @media (min-width: variables.$tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--radio::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: variables.$form-radiobutton-inner-color;
+    position: absolute;
+    left: 8.5px;
+    display: none;
+
+    @media (min-width: variables.$tablet) {
+      width: 18px;
+      height: 18px;
+      left: 11px;
+    }
+  }
+
+  // Чекбоксы
+  &--checkbox::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid variables.$form-radiobutton-outer-color;
+    flex-shrink: 0;
+
+    @media (min-width: variables.$tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &--checkbox::after {
+    content: "";
+    background-image: url("../../images/icons/stack.svg#checkbox-tick");
+    background-repeat: no-repeat;
+    background-size: contain;
+    //width: 18px;
+    //height: 17px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    //top: 7px;
+    //transform: translateY(-50%);
+    //left: 7.5px;
+    left: 3px;
+    display: none;
+
+    @media (min-width: variables.$tablet) {
+      width: 26px;
+      height: 26px;
+      left: 8px;
+    }
+  }
+}
+
+.form-label__input {
+  @include fonts.set-font(oswald, variables.$general-font-color, 16px, 112.5%, uppercase);
+  padding: 14px 15px 13px;
+  border: 1px solid variables.$form-input-border-color;
+
+  @media (min-width: variables.$tablet) {
+    font-size: inherit;
+    line-height: inherit;
+    padding: 10px 18px 11px;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+
+  &:hover {
+    border-color: variables.$form-input-hover-color;
+  }
+
+  &:focus {
+    border-color: variables.$form-input-focus-color;
+    outline: 1px solid variables.$form-input-focus-color;
+  }
+
+  &:invalid {
+    border-color: variables.$form-invalid-input-icon-color;
+    outline: 1px solid variables.$form-invalid-input-icon-color;
+  }
+}
+
+.form-label__input[type="radio"]:checked + .form-label__name {
+  &::after {
+    display: block;
+  }
+}
+
+.form-label__input[type="checkbox"]:checked + .form-label__name {
+  &::after {
+    display: block;
+  }
+}
+
+.form-label:hover .form-label__name {
+  &::before {
+    border-color: variables.$form-radiobutton-hover-color;
+  }
+}
+
+.extra-ingredients__input:disabled + .form-label__name {
+  opacity: 0.3;
+}

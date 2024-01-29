@@ -1,14 +1,44 @@
 @use "../../global/fonts";
 @use "../../global/variables";
+@use "../../global/common";
 
 .catalog-gift {
-  // temporary background color
-  background-color: variables.$hero-background-color;
+  display: flex;
+  align-items: center;
+
+  min-height: 290px;
+  background-image:
+    linear-gradient(variables.$hero-background-color, variables.$hero-background-color),
+    url("../../images/catalog/catalog-gift/cat-backpack@1x.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url(".../../images/catalog/catalog-gift/cat-backpack@2x.webp");
+  }
+
+  @media (min-width: variables.$tablet) {
+    min-height: initial;
+  }
+
+  @media (min-width: variables.$desktop) {
+    width: 17vw;
+  }
 }
 
 .catalog-gift__description {
+  @include common.reset-p;
+  padding: 59px 60px 43px 58px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  flex-grow: 1;
+  text-align: center;
 
   @include fonts.set-font(lato, variables.$general-light-font-color, 16px, 125%);
 
@@ -18,5 +48,20 @@
     background-repeat: no-repeat;
     width: 78px;
     height: 81px;
+    flex-shrink: 0;
+  }
+
+  @media (min-width: variables.$tablet) {
+    text-align: left;
+    gap: 52.5%;
+    flex-direction: row;
+    padding: 57px 125px 61px 79px;
+  }
+
+  @media (min-width: variables.$desktop) {
+    flex-direction: column;
+    padding: 57px 42px 45px 42px;
+    text-align: center;
+    gap: 46px;
   }
 }
