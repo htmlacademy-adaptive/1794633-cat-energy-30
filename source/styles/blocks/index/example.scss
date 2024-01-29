@@ -99,9 +99,14 @@
 
   @media (min-width: variables.$desktop) {
     flex-direction: row;
+    align-items: center;
     gap: 67px;
     margin-top: 28px;
   }
+}
+
+.example__costs-value {
+  flex-shrink: 0;
 }
 
 .example__slider {

@@ -13,7 +13,8 @@
   height: 57px;
 
   @media (min-width: variables.$tablet) {
-    width: 367px;
+    //width: 367px;
+    width: 47.6vw;
     height: 71px;
     grid-column-gap: 44px;
   }
@@ -35,6 +36,7 @@
 
 .results__number {
   @include fonts.set-font(oswald, variables.$general-title-color, 24px, 100%);
+  text-align: center;
 
   @media (min-width: variables.$tablet) {
     font-size: 30px;

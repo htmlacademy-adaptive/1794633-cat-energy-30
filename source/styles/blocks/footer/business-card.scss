@@ -38,12 +38,14 @@
 .business-card__title {
   @include fonts.set-font(oswald, variables.$triple-dark-grey-font-color, 16px, 125%, uppercase);
   @include common.reset-p;
-  width: 140px;
+  //width: 140px;
+  width: 43vw;
 
   @media (min-width: variables.$tablet) {
     font-size: 20px;
     line-height: 130%;
-    width: 163px;
+    //width: 163px;
+    width: 36vw;
     padding-left: 40px;
   }
 

@@ -15,7 +15,8 @@ $smoothing-background-color: rgb(70, 70, 70);
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: inherit;
-    background-size: auto 302px;
+    //background-size: auto 302px;
+    background-size: auto 60.5%;
     padding-top: 27px;
     padding-bottom: 20px;
 
@@ -38,14 +39,18 @@ $smoothing-background-color: rgb(70, 70, 70);
   }
 }
 
+$hero-container-left-right-padding-tablet: variables.$cup-container-padding-tablet + 90px;
+
 .hero__container {
   @media (min-width: variables.$tablet) {
     margin-top: 40px;
-    padding-left: variables.$cup-container-padding-tablet + 90px;
+    padding-left: $hero-container-left-right-padding-tablet;
+    padding-right: $hero-container-left-right-padding-tablet;
   }
 
   @media (min-width: variables.$desktop) {
     padding-left: 190px;
+    //padding-right: 30px;
     margin-top: 81px;
   }
 }

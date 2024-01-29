@@ -169,7 +169,7 @@ $card-padding-bottom-mobile: 24px;
 .catalog-card__title-link {
   @include common.reset-link;
   display: block;
-  width: 76px;
+  width: 30vw;
 
   @media (min-width: variables.$tablet) {
     width: auto;
@@ -254,6 +254,7 @@ $card-padding-bottom-mobile: 24px;
 .catalog-card__table-row {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
 
   @media (min-width: variables.$tablet) {
     border-bottom: 1px solid variables.$catalog-item-table-underline-color;
@@ -264,6 +265,7 @@ $card-padding-bottom-mobile: 24px;
 
 .catalog-card__table-property {
   padding: 0;
+  text-wrap: wrap;
 }
 
 .catalog-card__table-value {

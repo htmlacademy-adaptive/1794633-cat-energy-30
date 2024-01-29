@@ -24,6 +24,7 @@
     height: 30px;
     border-radius: 50%;
     border: 1px solid variables.$form-radiobutton-outer-color;
+    flex-shrink: 0;
 
     @media (min-width: variables.$tablet) {
       width: 40px;
@@ -55,6 +56,7 @@
     width: 30px;
     height: 30px;
     border: 1px solid variables.$form-radiobutton-outer-color;
+    flex-shrink: 0;
 
     @media (min-width: variables.$tablet) {
       width: 40px;
@@ -67,12 +69,16 @@
     background-image: url("../../images/icons/stack.svg#checkbox-tick");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 18px;
-    height: 17px;
+    //width: 18px;
+    //height: 17px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     position: absolute;
-    top: 7px;
-    left: 7.5px;
+    //top: 7px;
+    //transform: translateY(-50%);
+    //left: 7.5px;
+    left: 3px;
     display: none;
 
     @media (min-width: variables.$tablet) {
