@@ -68,6 +68,11 @@
     &--closed {
       display: none;
     }
+
+    &--no-js {
+      position: static;
+      display: block;
+    }
   }
 
   @media (min-width: variables.$tablet) {
