@@ -140,3 +140,7 @@
 .extra-ingredients__input:disabled + .form-label__name {
   opacity: 0.3;
 }
+
+.diet-selector__input:disabled + .form-label__name {
+  opacity: 0.3;
+}

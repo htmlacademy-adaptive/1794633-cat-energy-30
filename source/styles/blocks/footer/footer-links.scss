@@ -9,13 +9,13 @@
   @media (min-width: variables.$tablet) {
     flex-direction: row;
     align-items: center;
-    //justify-content: space-between;
+    justify-content: space-between;
     padding-top: 57px;
     padding-bottom: 55px;
   }
 
   @media (min-width: variables.$desktop) {
-    padding-top: 69px;
+    padding-top: 68px;
   }
 }
 
@@ -46,17 +46,17 @@
   @include common.reset-list;
 
   @media (min-width: variables.$tablet) {
-    margin-left: 161px;
+    margin-left: 35px;
   }
 
   @media (min-width: variables.$desktop) {
-    margin-left: 416px;
+    margin-left: 33px;
   }
 }
 
 .footer-links__copyright {
   @media (min-width: variables.$tablet) {
-    margin-left: auto;
-    margin-right: 0;
+    //margin-left: auto;
+    //margin-right: 0;
   }
 }
