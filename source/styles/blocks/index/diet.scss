@@ -31,6 +31,7 @@
     font-size: 36px;
     line-height: 100%;
     margin-top: 27px;
+    margin-left: 0;
   }
 
   @media (min-width: variables.$desktop) {
@@ -52,7 +53,7 @@
       position: absolute;
       width: 200px;
       height: 210px;
-      left: 62.5%;
+      left: 64.5%;
       top: 3px;
     }
 
@@ -78,7 +79,7 @@
       position: absolute;
       width: 268px;
       height: 200px;
-      left: 57%;
+      left: 59%;
       top: 14px;
     }
 
@@ -98,7 +99,8 @@
   @media (min-width: variables.$tablet) {
     font-size: 16px;
     line-height: 150%;
-    width: 54%;
+    color: variables.$general-title-color;
+    width: 56%;
     margin-top: 24px;
     flex-grow: 1;
   }

@@ -51,7 +51,7 @@
     flex-wrap: wrap;
     grid-template-rows: unset;
     grid-column-gap: initial;
-    grid-row-gap: initial;
+    grid-row-gap: 20px;
   }
 }
 
@@ -168,5 +168,11 @@
     @media (min-width: variables.$desktop) {
       right: -3px;
     }
+  }
+}
+
+.advantages__item-text {
+  @media (max-width: variables.$tablet - 1) {
+    padding-bottom: 2px;
   }
 }

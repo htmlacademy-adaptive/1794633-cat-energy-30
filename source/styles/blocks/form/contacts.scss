@@ -33,6 +33,11 @@
   @media (min-width: variables.$tablet) {
     width: 95%;
   }
+
+  @media (min-width: variables.$desktop) {
+    width: 48.5%;
+    padding-right: 35px;
+  }
 }
 
 .contacts__item {

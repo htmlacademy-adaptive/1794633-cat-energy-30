@@ -8,14 +8,16 @@
   padding-bottom: 4px;
 
   @media (max-width: variables.$tablet - 1) {
+    position: relative;
+
     &::before {
       content: "";
       width: 100vw;
       height: 1px;
       background-color: variables.$footer-underline-color;
-      position: relative;
+      position: absolute;
       left: -20px;
-      top: -10px;
+      top: -12px;
     }
 
     &::after {
@@ -23,9 +25,9 @@
       width: 100vw;
       height: 1px;
       background-color: variables.$footer-underline-color;
-      position: relative;
+      position: absolute;
       left: -20px;
-      bottom: -5px;
+      bottom: -16px;
     }
   }
 

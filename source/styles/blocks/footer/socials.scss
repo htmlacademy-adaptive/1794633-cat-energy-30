@@ -4,7 +4,9 @@
 
 .socials {
   display: flex;
-  gap: 24px;
+  column-gap: 24px;
+  row-gap: 5px;
+  flex-wrap: wrap;
   justify-content: center;
   padding-top: 20px;
   padding-bottom: 16px;

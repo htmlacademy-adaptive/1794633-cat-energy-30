@@ -4,12 +4,12 @@
 @use "./global/fonts";
 @use "./global/visually-hidden";
 @use "./global/common";
-@use "./global/button";
-@use "./global/cup-container";
-@use "./global/crossed-title";
-@use "./global/form-label";
 
 /* BLOCKS */
+@use "./blocks/button";
+@use "./blocks/crossed-title";
+@use "./blocks/form-label";
+@use "./blocks/cup-container";
 @use "./blocks/page-body";
 @use "./blocks/main-container";
 @use "./blocks/header/main-header";

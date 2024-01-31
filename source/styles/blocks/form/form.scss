@@ -14,7 +14,7 @@
 .form__cat-characteristics-and-diet-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 23px;
+  gap: 35px;
   margin-top: 39px;
   //margin-bottom: 26px;
 
@@ -42,7 +42,7 @@
 }
 
 .form__contacts {
-  margin-top: 17px;
+  margin-top: 33px;
   //margin-bottom: 10px;
 }
 
@@ -51,7 +51,7 @@
   //margin-bottom: 14px;
 
   @media (min-width: variables.$tablet) {
-    margin-top: 53px;
+    margin-top: 52px;
   }
 
   @media (min-width: variables.$desktop) {
@@ -63,7 +63,7 @@
   margin-top: 14px;
 
   @media (min-width: variables.$tablet) {
-    margin-top: 52px;
+    margin-top: 51px;
   }
 
   @media (min-width: variables.$desktop) {
@@ -79,7 +79,7 @@
     display: grid;
     grid-template-columns: 284px auto;
     gap: 57px;
-    margin-top: 51px;
+    margin-top: 52px;
   }
 
   @media (min-width: variables.$desktop) {
@@ -90,10 +90,6 @@
 
 .form__button {
   width: 100%;
-
-  @media (max-width: variables.$tablet - 1) {
-    //margin-bottom: 21px;
-  }
 }
 
 .form__required-fields-note {
@@ -103,10 +99,15 @@
   margin-top: 20px;
 
   @media (min-width: variables.$tablet) {
+    padding-bottom: 2px;
     margin-top: auto;
     margin-bottom: auto;
     font-size: 16px;
     line-height: 100%;
     text-align: left;
+  }
+
+  @media (min-width: variables.$desktop) {
+    margin-left: -3px;
   }
 }

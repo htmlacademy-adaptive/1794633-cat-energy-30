@@ -8,11 +8,13 @@
   @media (min-width: variables.$tablet) {
     display: flex;
     flex-wrap: wrap;
-    gap: 34px;
+    column-gap: 34px;
+    row-gap: 15px;
   }
 
   @media (min-width: variables.$desktop) {
-    gap: 34px;
+    row-gap: 20px;
+
 
     &--index .main-menu__link {
       color: variables.$general-light-font-color;
